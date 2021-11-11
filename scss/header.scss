@@ -1,0 +1,83 @@
+@import 'layout-prefix.scss';
+
+.header_inner  {
+    background-color: $main-color;
+    padding:2rem;
+    &::after{
+        @include clear-both;
+    }
+    h1{ 
+        float:left;
+        a{
+            color:#fff;
+            font-size:2.4rem;
+            font-family: 'Montserrat', 'Noto Sans KR',sans-serif;
+            font-weight: 700;
+        }
+    }
+    .right_cont_area {
+        float:right;
+        &::after{
+            @include clear-both;
+        }
+        .page_link_list {
+            float:left;
+            margin-right:6rem;
+            margin-top:8px;
+            li{
+                display: inline-block;
+                &::after{
+                    vertical-align: 3px;
+                    content:'';
+                    display:inline-block;
+                    width:4px;
+                    height:4px;
+                    border-radius: 50%;
+                    background-color: #D1D6DA;
+                    margin:0 20px;
+                }
+                &:last-of-type {
+                    &::after{
+                        display: none;
+                    }
+                }
+                a{
+                    color:#fff;
+                    font-size:1.6rem;
+                    display:  inline-block;
+                }
+            }
+        }
+        .user_info_area {
+            float:left;
+            display: flex;
+            align-items: center;
+            &::after{
+                @include clear-both;
+            }
+            .img_box{
+                margin-right:10px;
+            }
+            dl{
+                dt{
+                    font-size:1.6rem;
+                    color:#fff;
+                    font-weight: 700;
+                    margin-bottom:3px;
+                }
+                dd{
+                    font-size:1rem;
+                    color:#8B95A1;
+                }
+            }
+            .dropIcon {
+                display: block;
+                @include square(16px);
+                background: url(../images/icon/drop_arrow.svg) center no-repeat;
+                margin-left:10px;
+            }
+            
+        }
+    }
+    
+}

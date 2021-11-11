@@ -1,0 +1,59 @@
+@import 'layout-prefix.scss';
+
+.modal_cont_wrap {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    .modal_area {
+        width:60rem;
+        position: fixed;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 100;
+    }
+    .table_cont_area {
+        .close_btn {
+            position: absolute;
+            top:1rem;
+            right:1rem;
+            @include square(2.4rem);
+            background: url(../images/icon/close.svg) center no-repeat;
+            background-size: contain;
+            z-index: 1000;
+        }
+        .table_box_area .area{
+            height:300px;
+            table {
+                th{
+                    padding:1rem;
+                }
+                td{
+                    padding:1rem;
+                }
+            }
+        }
+        .one_type_area .area {
+            height:auto;
+            overflow:visible;
+            width:100%;
+            padding-right:0;
+            table {
+                td{
+                    padding:0.5rem;
+                }
+            }
+            .btn_area {
+                text-align: center;
+                padding-top:2rem;
+                button{
+                    margin:0 0.5rem;
+                }
+            }
+        }
+    }
+}

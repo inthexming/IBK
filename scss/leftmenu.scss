@@ -1,0 +1,172 @@
+@import 'layout-prefix.scss';
+
+.leftMenu_wrap {
+    width: 25rem;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    // height: calc(100vh - 75px);
+    background: #fff;
+    @include boxShadow;
+
+    .inner {
+        padding: 2.6rem 1rem;
+    }
+}
+
+.nav_cont_list {
+    >li {
+        >a {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #333D4B;
+            padding: 1.3rem 2rem;
+            border-radius: 5px;
+            background: url(../images/icon/drop_arrow_off.svg) center right 2rem no-repeat;
+
+            i {
+                margin-right: 2rem;
+                vertical-align: -2px;
+                display: inline-block;
+                @include square(1.6rem);
+                background: url(../images/icon/nav_01.svg) center no-repeat;
+                background-size: contain;
+            }
+
+            &.active {
+                background: url(../images/icon/drop_arrow_on.svg) center right 2rem no-repeat rgba(66, 109, 193, 0.07);
+                color: #426DC1;
+
+                i {
+                    background: url(../images/icon/nav_01_on.svg) center no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            &.nav_02 {
+                i {
+                    background: url(../images/icon/nav_02.svg) center no-repeat;
+                    background-size: contain;
+                }
+
+                &.active {
+                    i {
+                        background: url(../images/icon/nav_02_on.svg) center no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            &.nav_03 {
+                i {
+                    background: url(../images/icon/nav_03.svg) center no-repeat;
+                    background-size: contain;
+                }
+
+                &.active {
+                    i {
+                        background: url(../images/icon/nav_03_on.svg) center no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            &.nav_04 {
+                i {
+                    background: url(../images/icon/nav_04.svg) center no-repeat;
+                    background-size: contain;
+                }
+
+                &.active {
+                    i {
+                        background: url(../images/icon/nav_04_on.svg) center no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            &.nav_05 {
+                i {
+                    background: url(../images/icon/nav_05.svg) center no-repeat;
+                    background-size: contain;
+                }
+
+                &.active {
+                    i {
+                        background: url(../images/icon/nav_05_on.svg) center no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            &.nav_06 {
+                i {
+                    background: url(../images/icon/nav_06.svg) center no-repeat;
+                    background-size: contain;
+                }
+
+                &.active {
+                    i {
+                        background: url(../images/icon/nav_06_on.svg) center no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            &.nav_07 {
+                i {
+                    background: url(../images/icon/nav_07.svg) center no-repeat;
+                    background-size: contain;
+                }
+
+                &.active {
+                    i {
+                        background: url(../images/icon/nav_07_on.svg) center no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .dep_menu {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        p {
+            padding: 0.8rem 2rem;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #8B95A1;
+            border-radius: 5px;
+            background: rgba(66, 109, 193, 0.07);
+        }
+
+        >ul {
+            margin-left: 3rem;
+            margin: 1.8rem 0 1.8rem 2rem;
+            border-left: 1px solid #E8EBF0;
+
+            li {
+                padding-left: 1.6rem;
+                margin-bottom: 1.8rem;
+
+                a {
+                    font-size: 1.4rem;
+                    color: #8B95A1;
+
+                    &.on {
+                        color: #426DC1;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

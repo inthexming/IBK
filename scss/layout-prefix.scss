@@ -1,0 +1,181 @@
+// 색상 
+$point-color:#000;
+$main-color:#012A50;
+$main-txt:30px;
+
+@mixin boxShadow{
+  box-shadow: 0 3px 30px rgba(0,45,98,0.11);
+}
+@mixin clear-both {
+  display: block;
+  content: '';
+  clear: both;
+}
+@mixin center-align-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin vertical-align-flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin vertical-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin horizon-align-flex {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin horizon-align-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin horizon-align-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin height-align {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin align-wrap {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+//말줄임표
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 한줄 width 설정 
+@mixin ellipsis($w) {
+  width:$w;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 여러줄일때 
+@mixin ellipsis2($line,$w,$h) {
+  width:$w;
+  height:$h;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:$line;
+  -webkit-box-orient:vertical;
+}
+
+
+@mixin box-sizing($type) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+@mixin border-radius($num) {
+  -webkit-border-radius: $num;
+  -moz-border-radius: $num;
+  border-radius: $num;
+}
+
+@mixin transition($type, $second) {
+  -webkit-transition: $type $second;
+  -moz-transition: $type $second;
+  -o-transition: $type $second;
+  transition: $type $second;
+}
+
+@mixin box-shadow($style) {
+  -webkit-box-shadow: $style;
+  -moz-box-shadow: $style;
+  box-shadow: $style;
+}
+
+@mixin background-size($num) {
+  -webkit-background-size: $num;
+  -moz-background-size: $num;
+  -o-background-size: $num;
+  background-size: $num;
+}
+
+@mixin transform-skew($num) {
+  -webkit-transform: skew($num);
+  -ms-transform: skew($num);
+  -moz-transform: skew($num);
+  -o-transform: skew($num);
+  transform: skew($num);
+}
+
+@mixin transform-rotate($num) {
+  -webkit-transform: rotate($num);
+  -ms-transform: rotate($num);
+  -moz-transform: rotate($num);
+  -o-transform: rotate($num);
+  transform: rotate($num);
+}
+
+@mixin square($num) {
+  width: $num;
+  height: $num;
+}
+
+@mixin full-circle($num) {
+  @include square($num);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+@mixin vertical-height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin center-align-position($width, $height) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($height/2);
+  margin-left: -($width/2);
+  width: $width;
+  height: $height;
+}
+
+// margin
+@mixin fixmr($num) {
+  margin-right:($num)px !important;
+}
+@mixin fixml($num) {
+  margin-left:($num)px !important;
+}
+@mixin fixmt($num) {
+  margin-top:($num)px !important;
+}
+@mixin fixmb($num) {
+  margin-bottom:($num)px !important;
+}
+
+// padding
+@mixin fixpr($num) {
+  padding-right:($num)px !important;
+}
+@mixin fixpl($num) {
+  padding-left:($num)px !important;
+}
+@mixin fixpt($num) {
+  padding-top:($num)px !important;
+}
+@mixin fixpb($num) {
+  padding-bottom:($num)px !important;
+}

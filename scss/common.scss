@@ -1,0 +1,360 @@
+@import 'layout-prefix.scss';
+
+#content {
+    position: relative;
+    background: #F9F9F9;
+}
+
+
+// 공통_ cont_box
+.cont_box {
+    border-radius: 1rem;
+    @include boxShadow;
+    background-color: #fff;
+    padding: 2rem;
+    position: relative;
+
+    .cont_tit {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        span {
+            font-weight: 400;
+            color: #426DC1;
+            margin-left: 1rem;
+            vertical-align: middle;
+            font-size: 1.2rem;
+        }
+        &.bar_tit {
+            display: inline-block;
+            padding-bottom:3px;
+            border-bottom:2px solid #426DC1;
+            position: relative;
+            span{
+                width:20rem;
+                display: block;
+                position: absolute;
+                top:50%;
+                left:9.5rem;
+                transform: translateY(-50%);
+                color:#8B95A1;
+                font-size:1.6rem;
+            }
+        }
+    }
+}
+
+// 공통 버튼 css 
+.base_btn {
+    border-radius: 5px;
+    padding: 0.9rem 1.5rem;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: 1px solid $main-color;
+    color: #fff;
+    background-color: $main-color;
+    &.gray{
+        border: 1px solid #D1D6DA;
+        color: #012A50;
+        background-color: #E8EBF0;
+        margin-left:0.5rem;
+    }
+}
+
+.line_btn {
+    border-radius: 5px;
+    padding: 0.9rem 1.5rem;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: 1px solid $main-color;
+    color: $main-color;
+    background-color: #fff;
+    i{
+        margin-right: 1rem;
+        vertical-align: middle;
+        display: inline-block;
+        @include square(1.6rem);
+        background: url(../images/icon/delete.svg) center no-repeat;
+        background-size: cover;
+    }
+}
+
+// input 
+input[type='text'] {
+    width: 100%;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    border: 1px solid #E8EBF0;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: #8B95A1
+    }
+    &:disabled {
+        color:#8B95A1;
+        font-weight: 700;
+        border:none;
+    }
+}
+
+// table 
+table {
+    border-bottom: 1px solid #E8EBF0;
+
+    th {
+        font-size: 1.4rem;
+        color: #445365;
+        padding: 1rem;
+        background-color: #DBDEE5;
+        border-right: 1px solid #E8EBF0;
+        border-top: 1px solid #E8EBF0;
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        &:first-of-type {
+            padding: 1rem 0;
+        }
+    }
+
+    td {
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: #333D4B;
+        padding: 1rem;
+        border-right: 1px solid #E8EBF0;
+        border-top: 1px solid #E8EBF0;
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        &:first-of-type {
+            padding: 1rem 0;
+        }
+
+    }
+
+    tr:nth-of-type(even) td {
+        background-color: #F4F5F7;
+    }
+
+    // blue_type table 
+    &.blue_type {
+        th {
+            background-color: #C6D3EC;
+        }
+
+        tr:nth-of-type(even) td {
+            background-color: #F1F5FB;
+        }
+    }
+
+    // table select css 영역 
+    .select_box {
+        .selected-type {
+            height: 2rem;
+            line-height: 2rem;
+        }
+        .select_list {
+            top:3rem;
+        }
+    }
+}
+
+// 체크 박스 css
+.agree_chk_box {
+    position: relative;
+}
+
+input[type="checkbox"]+label {
+    // position: relative;
+    padding-left: 0px;
+    font-size: 1.2rem;
+    color: #757575;
+    /* text color*/
+}
+
+input[type="checkbox"]+label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(../images/icon/checkbox_off.svg) center no-repeat;
+    background-size: contain;
+}
+
+input[type="checkbox"]:checked+label:after {
+    background: url(../images/icon/checkbox_on.svg) center no-repeat;
+    background-size: contain;
+}
+
+// 라디오 버튼 
+input[type="radio"]+label {
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    color: #333D4B;
+    /* text color*/
+}
+
+input[type="radio"]+label:after {
+    content: '';
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(../images/icon/radio_off.svg) center no-repeat;
+    background-size: contain;
+}
+input[type="radio"]:checked+label {
+    font-weight: 700;
+}
+input[type="radio"]:checked+label:after {
+    background: url(../images/icon/radio_on.svg) center no-repeat;
+    background-size: contain;
+}
+
+
+
+//scroll box 
+.scroll_y::-webkit-scrollbar {
+    width: 3px;
+}
+
+.scroll_y::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scroll_y::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #D1D6DA;
+
+}
+
+.scroll_y::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+.scroll_x::-webkit-scrollbar {
+    height:4px;
+}
+
+.scroll_x::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scroll_x::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #D1D6DA;
+
+}
+
+.scroll_x::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+// select box css 
+.select_box {
+    
+    position: relative;
+    .selected-type {
+        width:calc(100% - 1rem);
+        height:3.4rem;
+        line-height: 3.4rem;
+        cursor: pointer;
+        font-size:1.4rem;
+        font-weight: 700;
+        padding-left:1rem;
+        background: url(../images/icon/drop_arrow.svg) center right 0.5rem no-repeat;
+        &.disabled {
+            color:#8B95A1;
+            background: url(../images/icon/drop_arrow_off.svg) center right 0.5rem no-repeat #F5F5F5;
+        }
+        &.ph{
+            color:#8B95A1;
+            font-weight: 400;
+        }
+    }
+    .select_list {
+        &.show{
+            display: block;
+        }
+        &.hide{
+            display: none;
+        }
+        display: none;
+        width:calc(100% - 2rem);
+        position: absolute;
+        top:3.5rem;
+        left:0;
+        padding:1rem;
+        background: #fff;
+        z-index: 10;
+        border-radius: 5px;
+        @include boxShadow;
+        max-height:11rem;
+        overflow-y: scroll;
+        li{
+            height:3.4rem;
+        line-height: 3.4rem;
+            cursor: pointer;
+            font-size:1.4rem;
+            font-weight: 700;
+            margin-bottom:0.5rem;
+            &:last-of-type{
+                margin-bottom:0;
+            }
+        }
+    }
+}
+
+// 페이지 이전,다음 버튼  
+.page_navigation_area {
+    position: relative;
+    padding-top:2rem;
+    .area{
+        text-align: center;
+        a{
+            display: inline-block;
+            font-size:1.4rem;
+            font-weight: 700;
+            color:#8B95A1;
+            vertical-align: middle;
+            &.prev {
+                @include square(24px);
+                background: url(../images/icon/prev.svg) center no-repeat;
+                &.b_prev {
+                    background: url(../images/icon/b_prev.svg) center no-repeat;
+                }
+            }
+            &.next_txt {
+                color:#012A50;
+                margin-left:4rem;
+            }
+            &.next {
+                @include square(24px);
+                background: url(../images/icon/next.svg) center no-repeat;
+                &.a_next {
+                    background: url(../images/icon/a_next.svg) center no-repeat;
+                }
+            }
+        }
+        
+    }
+}
