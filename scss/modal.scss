@@ -17,6 +17,18 @@
         z-index: 100;
     }
     .table_cont_area {
+        .cont_box{
+            padding:0;
+            .cont_tit{
+                background:#F2F4F8;
+                padding:1.3rem 2rem;
+                margin-bottom:0;
+                border-radius: 1rem 1rem 0 0;
+            }
+        }
+        .lookup_cont_area{
+            padding:2rem 2rem 0 2rem;
+        }
         .close_btn {
             position: absolute;
             top:1rem;
@@ -25,6 +37,9 @@
             background: url(../images/icon/close.svg) center no-repeat;
             background-size: contain;
             z-index: 1000;
+        }
+        .table_box_area {
+            padding:2rem;
         }
         .table_box_area .area{
             height:300px;

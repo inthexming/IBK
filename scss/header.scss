@@ -52,11 +52,14 @@
             float:left;
             display: flex;
             align-items: center;
+            position: relative;
             &::after{
                 @include clear-both;
             }
             .img_box{
                 margin-right:10px;
+                @include square(3.6rem);
+                border-radius: 50%;
             }
             dl{
                 dt{
@@ -68,6 +71,8 @@
                 dd{
                     font-size:1rem;
                     color:#8B95A1;
+                    font-weight: 700;
+                    margin-top:0.4rem;
                 }
             }
             .dropIcon {
@@ -75,8 +80,44 @@
                 @include square(16px);
                 background: url(../images/icon/drop_arrow.svg) center no-repeat;
                 margin-left:10px;
+                &.active{
+                    transform: rotate(-180deg);
+                }
             }
-            
+            .dropdown_cont_area {
+                display: none;
+                position: absolute;
+                top:4.5rem;
+                left:0;
+                z-index: 10;
+                background:#fff;
+                width:100%;
+                border-radius: 1rem;
+                box-shadow:0px 3px 3rem rgba(0,45,98,0.11);
+                &.show{
+                    display: block;
+                }
+                .info_box {
+                    display: flex;
+                    padding:1.2rem;
+                    border-bottom:1px solid #E8EBF0;
+                    dl{
+                        dt{
+                            color:#333D4B;
+                        }
+                    }
+                }
+                .logout_area {
+                    padding:1.2rem 1.4rem;
+                    a{
+                        display: inline-block;
+                        font-size:1.4rem;
+                        font-weight: 700;
+                        padding-left: 3rem;
+                        background: url(../images/icon/logout.svg) left center no-repeat;
+                    }
+                }
+            }
         }
     }
     

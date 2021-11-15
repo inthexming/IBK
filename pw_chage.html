@@ -34,22 +34,27 @@
                 <div class="login_bg"></div>
                 <div class="login_info">
                     <div class="inner">
-                        <h2 class="login_title">IBKS HUB</h2>
+                        <h2 class="pw_title">비밀번호 재설정</h2>
                         <div class="info">
                             <div class="info_list">
                                 <label for="id">사번</label>
-                                <!-- class "focus" 추가시 라인 활성화 -->
-                                <input type="text" id="id" class="login_input focus" placeholder="아이디를 입력해주세요" value="01201212391239">
+                                <input type="text" id="id" class="login_input" placeholder="아이디를 입력해주세요" value="01201212391239">
                             </div>
                             <div class="info_list">
-                                <label for="pw">비밀번호</label>
-                                <input type="password" id="pw" class="login_input" placeholder="비밀번호를 입력해주세요">
+                                <label for="pw">현재 비밀번호</label>
+                                <input type="password" id="pw" class="login_input" placeholder="현재 비밀번호를 입력해주세요.">
+                            </div>
+                            <div class="info_list">
+                                <label for="new_pw">새 비밀번호</label>
+                                <input type="password" id="new_pw" class="login_input" placeholder="새 비밀번호를 입력해주세요.">
+                                <p class="msg">※ 영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+                            </div>
+                            <div class="info_list">
+                                <label for="new_pw_chk">새 비밀번호 확인</label>
+                                <input type="password" id="new_pw_chk" class="login_input" placeholder="새 비밀번호를 입력해주세요.">
                             </div>
                         </div>
-                        <input type="submit" value="로그인" class="login_btn">
-                        <div class="pw_wrap">
-                            <a href="#none">비밀번호 재설정하기</a>
-                        </div>
+                        <input type="submit" value="변경 완료" class="login_btn">
                     </div>
                 </div>
             </div>

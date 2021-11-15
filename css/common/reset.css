@@ -366,6 +366,10 @@ background: url(../../imgs/common/bg_checkbox_off.png) center /100% no-repeat;}
   padding-bottom: 6px !important;
 }
 
+.pb20 {
+  padding-bottom: 2rem !important;
+}
+
 .pb10 {
   padding-bottom: 1.5rem !important;
 }
@@ -373,6 +377,7 @@ background: url(../../imgs/common/bg_checkbox_off.png) center /100% no-repeat;}
 .pl0 {
   padding-left: 0 !important;
 }
+
 
 .pr0 {
   padding-right: 0 !important;

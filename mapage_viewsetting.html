@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>title</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="css/common/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/layout-prefix.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <link rel="stylesheet" href="css/header.css" type="text/css" />
+    <link rel="stylesheet" href="css/leftmenu.css" type="text/css" />
+
+
+    <!-- 페이지 Css -->
+    <link rel="stylesheet" href="css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="css/modal.css" type="text/css" />
+
+    <!-- 공통 JS -->
+    <script src="js/common/jquery-3.5.1.min.js"></script>
+    <script src="js/common/leftmenu.js"></script>
+
+    <!-- 페이지 JS -->
+    <script>
+        $(document).ready(function () {
+            // 전체 동의 체크박스 
+            $('#check_box').click(function () {
+                $('.all_chk').prop('checked', this.checked);
+            });
+
+            // 전체 동의 체크박스 
+            $('#check_box_02').click(function () {
+                $('.all_chk_02').prop('checked', this.checked);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- start of :: wrap -->
+    <div id="wrap">
+        <!-- start of :: header -->
+        <div id="header">
+            <div class="header_inner">
+                <h1 class="logo"><a href="#none">IBKS HUB</a></h1>
+                <div class="right_cont_area">
+                    <ul class="page_link_list">
+                        <li><a href="#none">관리고객동향</a></li>
+                        <li><a href="#none">마이페이지</a></li>
+                        <li><a href="#none">신용공여관리 현황</a></li>
+                        <li><a href="#none">접촉일정</a></li>
+                    </ul>
+                    <div class="user_info_area">
+                        <div class="img_box">
+                            <img src="images/icon/user.svg" alt="유저이미지">
+                        </div>
+                        <dl>
+                            <dt>홍길동</dt>
+                            <dd>강남센터</dd>
+                        </dl>
+                        <a href="#none" class="dropIcon"></a>
+                        <div class="dropdown_cont_area">
+                            <div class="info_box">
+                                <div class="img_box">
+                                    <img src="images/icon/user.svg" alt="유저이미지">
+                                </div>
+                                <dl>
+                                    <dt>홍길동</dt>
+                                    <dd>강남센터</dd>
+                                </dl>
+                            </div>
+                            <div class="logout_area">
+                                <a href="#none">로그아웃</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of :: header -->
+        <!-- start of :: contents -->
+        <div id="content">
+            <div class="inner">
+                <div class="leftMenu_wrap">
+                    <div class="inner">
+                        <ul class="nav_cont_list">
+                            <li>
+                                <a href="#none" class="nav_01 active"><i></i>마이페이지</a>
+                                <div class="dep_menu show">
+                                    <ul>
+                                        <li><a href="#none">마이페이지</a></li>
+                                        <li><a href="#none" class="on">화면설정</a></li>
+                                        <li><a href="#none">결합계좌관리</a></li>
+                                        <li><a href="#none">고객그룹관리</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_02"><i></i>고객접촉</a>
+                                <div class="dep_menu">
+                                    <p>종합일정관리</p>
+                                    <ul>
+                                        <li><a href="#none" class="on">접촉일정</a></li>
+                                        <li><a href="#none">금융상품만기/이자일정</a></li>
+                                        <li><a href="#none">신용공여만기일정</a></li>
+                                        <li><a href="#none">권리일정</a></li>
+                                    </ul>
+                                    <p>접촉관리</p>
+                                    <ul>
+                                        <li><a href="#none">접촉예정 고객 현황</a></li>
+                                        <li><a href="#none">가망고객등록/수정</a></li>
+                                        <li><a href="#none">접촉활동현황</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_03"><i></i>고객관리</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_04"><i></i>고객분석</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_05"><i></i>금융상품</a>
+                                <div class="dep_menu">
+                                    <ul>
+                                        <li><a href="#none">금융상품 판매 현황</a></li>
+                                        <li><a href="#none">채권/CP 종합정보</a></li>
+                                        <li><a href="#none">펀드종합정보</a></li>
+                                        <li><a href="#none">WRAP종합정보</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_06"><i></i>영업성과</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_07"><i></i>캠페인 관리</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pageCont_wrap">
+                    <div class="inner">
+                        <div class="page_tit_area">
+                            <p class="tit">화면설정</p>
+                            <button type="button" class="mark_btn"></button>
+                            <button type="button" class="msg_icon"></button>
+                        </div>
+                        <div class="page_msg_area">
+                            초기화면 선택시 1개만 선택이 가능합니다.<br>
+                            즐겨찾기 화면의 경우 10개까지 하며 선택하여 추가 또는 선택화면에서 제거할 수 있습니다.
+                        </div>
+                        <section class="table_cont_area setting_half_cont">
+                            <!-- 화면선택 영역 -->
+                            <div class="cont_box">
+                                <p class="cont_tit">화면선택</p>
+                                <div class="table_box_area">
+                                    <div class="area scroll_y">
+                                        <table class="left">
+                                            <colgroup>
+                                                <col width="50px;">
+                                                <col width="50px;">
+                                                <col width="*">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="check_box" class="all_chk">
+                                                            <label for="check_box" class="all_chk"></label>
+                                                        </div>
+                                                    </th>
+                                                    <th class="center_txt">초기</th>
+                                                    <th>화면명</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_01" class="all_chk">
+                                                            <label for="chk_01" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_01" name="cho_radio" checked>
+                                                            <label for="ch0_01"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>종합일정관리</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_02" class="all_chk">
+                                                            <label for="chk_02" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td> 
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_02" name="cho_radio">
+                                                            <label for="ch0_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>고객접촉</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_03" class="all_chk">
+                                                            <label for="chk_03" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_03" name="cho_radio">
+                                                            <label for="ch0_03"></label>
+                                                        </div>
+                                                </td>
+                                                    <td>가망고객등록</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_04" class="all_chk">
+                                                            <label for="chk_04" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_04" name="cho_radio">
+                                                            <label for="ch0_04"></label>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                    <td>관리고객 종합</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_05" class="all_chk">
+                                                            <label for="chk_05" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_05" name="cho_radio">
+                                                            <label for="ch0_05"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>신규고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_06" class="all_chk">
+                                                            <label for="chk_06" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_07" name="cho_radio">
+                                                            <label for="ch0_07"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>거래고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_07" class="all_chk">
+                                                            <label for="chk_07" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_08" name="cho_radio">
+                                                            <label for="ch0_08"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>재거래고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_08" class="all_chk">
+                                                            <label for="chk_08" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_09" name="cho_radio">
+                                                            <label for="ch0_09"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>예탁자산변동 고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_09" class="all_chk">
+                                                            <label for="chk_09" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_10" name="cho_radio">
+                                                            <label for="ch0_10"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>권리발생 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_10" class="all_chk">
+                                                            <label for="chk_10" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_11" name="cho_radio">
+                                                            <label for="ch0_11"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>담보관리 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_11" class="all_chk">
+                                                            <label for="chk_11" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_12" name="cho_radio">
+                                                            <label for="ch0_12"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>만기/이자지급 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_12" class="all_chk">
+                                                            <label for="chk_12" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_13" name="cho_radio">
+                                                            <label for="ch0_13"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>목표수익률 도달현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_13" class="all_chk">
+                                                            <label for="chk_13" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_14" name="cho_radio">
+                                                            <label for="ch0_14"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>고객기본 정보</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_14" class="all_chk">
+                                                            <label for="chk_14" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_15" name="cho_radio">
+                                                            <label for="ch0_15"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>고객 목표수익률 관리</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_15" class="all_chk">
+                                                            <label for="chk_15" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_16" name="cho_radio">
+                                                            <label for="ch0_16"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>고객기본 정보</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_16" class="all_chk">
+                                                            <label for="chk_16" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_17" name="cho_radio">
+                                                            <label for="ch0_17"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>고객기본 정보</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_18" class="all_chk">
+                                                            <label for="chk_18" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="ch0_19" name="cho_radio">
+                                                            <label for="ch0_19"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>고객기본 정보</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="btn_cont_area">
+                                    <button class="line_btn">초기화면 지정</button>
+                                    <button class="line_btn">즐겨찾기 추가</button>
+                                </div>
+                            </div>
+                            <!-- 즐겨찾기 선택화면 영역 -->
+                            <div class="cont_box">
+                                <p class="cont_tit">즐겨찾기 선택화면</p>
+                                <div class="table_box_area  favor_box_area">
+                                    <div class="area scroll_y">
+                                        <table class="left">
+                                            <colgroup>
+                                                <col width="50px;">
+                                                <col width="*">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="check_box_02" class="all_chk_02">
+                                                            <label for="check_box_02" class="all_chk_02"></label>
+                                                        </div>
+                                                    </th>
+                                                    <th>화면명</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_001" class="all_chk_02">
+                                                            <label for="chk_001" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>고객접촉</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_002" class="all_chk_02">
+                                                            <label for="chk_002" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>종합일정관리</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_003" class="all_chk_02">
+                                                            <label for="chk_003" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>가망고객등록</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_004" class="all_chk_02">
+                                                            <label for="chk_004" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>관리고객 종합</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_005" class="all_chk_02">
+                                                            <label for="chk_005" class="all_chk"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>신규고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_006" class="all_chk_02">
+                                                            <label for="chk_006" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>거래고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_007" class="all_chk_02">
+                                                            <label for="chk_007" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>재거래고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_008" class="all_chk_02">
+                                                            <label for="chk_008" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>예탁자산변동 고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_009" class="all_chk_02">
+                                                            <label for="chk_009" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>휴면/이탈고객 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_010" class="all_chk_02">
+                                                            <label for="chk_010" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>권리발생 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_011" class="all_chk_02">
+                                                            <label for="chk_011" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>담보관리 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_012" class="all_chk_02">
+                                                            <label for="chk_012" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>만기/이자지급 현황</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="agree_chk_box">
+                                                            <input type="checkbox" id="chk_013" class="all_chk_02">
+                                                            <label for="chk_013" class="all_chk_02"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>목표수익률 도달현황</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="btn_cont_area icon_btn_area">
+                                    <div class="icon_item_area">
+                                        <button type="button">위</button>
+                                        <button type="button">아래</button>
+                                        <button type="button">맨위</button>
+                                        <button type="button">맨아래</button>
+                                    </div>
+                                    <button class="line_btn">삭제</button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="last_btn_area">
+                            <button class="base_btn reset_btn">초기화</button>
+                            <button class="base_btn">저장하기</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of :: contents -->
+    </div>
+    <!-- end of :: wrap -->
+</body>
+
+</html>

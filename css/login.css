@@ -40,6 +40,13 @@
   text-align: center;
 }
 
+.login_info .pw_title {
+  font-size: 3.6rem;
+  color: #012A50;
+  text-align: center;
+  font-weight: 700;
+}
+
 .login_info .info {
   padding-top: 4rem;
 }
@@ -60,7 +67,7 @@
   border-radius: 5px;
   width: 100%;
   height: 4.8rem;
-  border: 1px solid #D1D6DA;
+  border: 1px solid #426DC1;
   background: #fff;
   padding-left: 1.6rem;
   font-size: 1.4rem;
@@ -89,8 +96,18 @@
   font-weight: 400;
 }
 
-.login_info .info_list input.fouse {
+.login_info .info_list input.focus {
   border: 1px solid #426DC1;
+}
+
+.login_info .info_list input:placeholder-shown {
+  border: 1px solid #D1D6DA;
+}
+
+.login_info .info_list .msg {
+  font-size: 1.2rem;
+  color: #426DC1;
+  margin-top: 0.6rem;
 }
 
 .login_info .login_btn {

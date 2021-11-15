@@ -47,7 +47,7 @@
 // 공통 버튼 css 
 .base_btn {
     border-radius: 5px;
-    padding: 0.9rem 1.5rem;
+    padding: 0.9rem 2rem;
     box-sizing: border-box;
     font-size: 1.4rem;
     font-weight: 700;
@@ -60,11 +60,14 @@
         background-color: #E8EBF0;
         margin-left:0.5rem;
     }
+    &.half{
+        padding: 0.9rem 1.5rem;
+    }
 }
 
 .line_btn {
     border-radius: 5px;
-    padding: 0.9rem 1.5rem;
+    padding: 0.9rem 2rem;
     box-sizing: border-box;
     font-size: 1.4rem;
     font-weight: 700;
@@ -78,6 +81,9 @@
         @include square(1.6rem);
         background: url(../images/icon/delete.svg) center no-repeat;
         background-size: cover;
+    }
+    &.half{
+        padding: 0.9rem 1.5rem;
     }
 }
 
@@ -100,35 +106,48 @@ input[type='text'] {
         color:#8B95A1;
         font-weight: 700;
         border:none;
+        background:#E8EBF0;
     }
 }
 
 // table 
 table {
     border-bottom: 1px solid #E8EBF0;
-
+    &.left{
+        th{
+            text-align: left !important;
+            &.center_txt{
+                text-align: center !important;
+            }
+        }
+        td{
+            text-align: left !important;
+        }
+    }
     th {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: #445365;
-        padding: 1rem;
+        padding: 0.8rem;
         background-color: #DBDEE5;
         border-right: 1px solid #E8EBF0;
         border-top: 1px solid #E8EBF0;
+        text-align: center;
 
         &:last-of-type {
             border-right: none;
         }
 
         &:first-of-type {
-            padding: 1rem 0;
+            padding: 0.8rem 0;
         }
     }
 
     td {
+        text-align: center;
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: #333D4B;
-        padding: 1rem;
+        padding: 0.8rem;
         border-right: 1px solid #E8EBF0;
         border-top: 1px solid #E8EBF0;
 
@@ -211,7 +230,6 @@ input[type="radio"]+label {
 input[type="radio"]+label:after {
     content: '';
     position: absolute;
-    position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0,-50%);
@@ -271,16 +289,29 @@ input[type="radio"]:checked+label:after {
 
 // select box css 
 .select_box {
-    
     position: relative;
+    &.type{
+        .selected-type {
+            font-size:1.4rem;
+        }
+        .select_list{
+            padding:1rem;
+            li{
+                height:3.4rem;
+                line-height: 3.4rem;
+                font-size:1.4rem;
+            }
+        }
+    }
     .selected-type {
         width:calc(100% - 1rem);
         height:3.4rem;
         line-height: 3.4rem;
         cursor: pointer;
-        font-size:1.4rem;
+        font-size:1.2rem;
         font-weight: 700;
         padding-left:1rem;
+        text-align: left;
         background: url(../images/icon/drop_arrow.svg) center right 0.5rem no-repeat;
         &.disabled {
             color:#8B95A1;
@@ -303,7 +334,7 @@ input[type="radio"]:checked+label:after {
         position: absolute;
         top:3.5rem;
         left:0;
-        padding:1rem;
+        padding:0.8rem;
         background: #fff;
         z-index: 10;
         border-radius: 5px;
@@ -311,10 +342,11 @@ input[type="radio"]:checked+label:after {
         max-height:11rem;
         overflow-y: scroll;
         li{
-            height:3.4rem;
-        line-height: 3.4rem;
+            text-align: left;
+            height:3rem;
+            line-height: 3rem;
             cursor: pointer;
-            font-size:1.4rem;
+            font-size:1.2rem;
             font-weight: 700;
             margin-bottom:0.5rem;
             &:last-of-type{
