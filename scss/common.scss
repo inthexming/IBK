@@ -41,6 +41,19 @@
                 font-size:1.6rem;
             }
         }
+        &.tab_tit {
+            button {
+                color:#8B95A1;
+                font-size:1.6rem;
+                margin-right:2rem;
+                &.on{
+                    font-weight: 700; 
+                    padding-bottom:3px;
+                    color:#333D4B;
+                    border-bottom:2px solid #426DC1;
+                }
+            }
+        }
     }
 }
 
@@ -139,6 +152,10 @@ table {
 
         &:first-of-type {
             padding: 0.8rem 0;
+            input[type="checkbox"]+label:after {
+                background: url(../images/icon/checkbox_off_02.svg) center no-repeat;
+            }
+
         }
     }
 
@@ -157,6 +174,7 @@ table {
 
         &:first-of-type {
             padding: 1rem 0;
+            
         }
 
     }
@@ -247,7 +265,6 @@ input[type="radio"]:checked+label:after {
 }
 
 
-
 //scroll box 
 .scroll_y::-webkit-scrollbar {
     width: 3px;
@@ -301,6 +318,14 @@ input[type="radio"]:checked+label:after {
                 line-height: 3.4rem;
                 font-size:1.4rem;
             }
+        }
+    }
+    &.cal{
+        background: url(../images/icon/calendar.svg) top 1rem left 1rem no-repeat #fff;
+        .selected-type {
+            padding-left:1rem;
+            text-indent: 2.5rem;
+            // background: url(../images/icon/drop_arrow.svg) center right 0rem no-repeat;
         }
     }
     .selected-type {
@@ -362,31 +387,81 @@ input[type="radio"]:checked+label:after {
     padding-top:2rem;
     .area{
         text-align: center;
-        a{
+        span{
             display: inline-block;
             font-size:1.4rem;
             font-weight: 700;
             color:#8B95A1;
             vertical-align: middle;
+            cursor: pointer;
+            &.active{
+                color:#012A50;
+            }
             &.prev {
                 @include square(24px);
                 background: url(../images/icon/prev.svg) center no-repeat;
                 &.b_prev {
                     background: url(../images/icon/b_prev.svg) center no-repeat;
+                    &.active{
+                        background: url(../images/icon/b_prev_on.svg) center no-repeat;
+                    }
+                }
+            }
+            &.prev_txt{
+                background: url(../images/icon/prev.svg) left center no-repeat;
+                padding-left:3rem;
+                &.active{
+                    background: url(../images/icon/prev_on.svg) left center no-repeat;
                 }
             }
             &.next_txt {
-                color:#012A50;
-                margin-left:4rem;
+                margin-left:3rem;
+                padding-right:3rem;
+                background: url(../images/icon/next.svg) center right no-repeat;
+                &.active{
+                    background: url(../images/icon/next_on.svg) center right no-repeat;
+                }
             }
             &.next {
                 @include square(24px);
                 background: url(../images/icon/next.svg) center no-repeat;
                 &.a_next {
                     background: url(../images/icon/a_next.svg) center no-repeat;
+                    &.active{
+                        background: url(../images/icon/a_next_on.svg) center no-repeat;
+                    }
                 }
             }
         }
         
+    }
+}
+
+.minical_area{
+    width:13rem;
+    float:left;
+    border: 1px solid #E8EBF0;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-right:1rem;
+    .calendar_btn {
+        @include square(1.6rem);
+        background: url(../images/icon/calendar.svg) center no-repeat;
+        float: left;
+        margin-top:1rem;
+        margin-left:1rem;
+    }
+    input{
+        width:calc(100% - 2.6rem);
+        border:none;
+        background-color: transparent;
+        height:3.4rem;
+        line-height: 3.4rem;
+        font-weight: 700;
+        font-size:1.2rem;
+        &:disabled{
+            background-color: transparent;
+            color:#333D4B;
+        }
     }
 }

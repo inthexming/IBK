@@ -6,9 +6,8 @@
     // left:250px;
     margin-left:25rem;
     width:calc(100% - 25rem);
-    min-height:calc(100vh - 7.5rem);
+    min-height:calc(100vh - 8.5rem);
     // overflow: hidden;
-    
     .inner {
         padding:4rem 4rem 0rem 4rem;
     }
@@ -55,7 +54,7 @@
         }
         .select_box {
             float:left;
-            width:13rem;
+            width:17rem;
             border:1px solid #E8EBF0;
             background-color: #fff;
             border-radius: 5px;
@@ -227,7 +226,7 @@
         @include clear-both;
     }
     .left_box {
-        width:calc(40% - 3rem);
+        width:calc(45% - 3rem);
         float: left;
         position: relative;
         .arrow_btn_area{
@@ -254,14 +253,14 @@
     .center_box {
         float: left;
         margin-left:1.5rem;
-        width:calc(20% - 3rem);
+        width:calc(15% - 3rem);
         position: relative;
         .search_btn {
             position: absolute;
             top:1rem;
             right:2rem;
             box-sizing: border-box;
-            padding:1rem 1.5rem;
+            padding:1rem 1.2rem;
             font-size:1.4rem;
             color:#333D4B;
             font-weight: 700;
@@ -290,6 +289,12 @@
         tr:nth-of-type(even) td {
             background-color: transparent;
         }
+        .red{
+            color:#C0504D;
+        }
+        .blue {
+            color:#4881BD;
+        }
         th {
             font-size:1.2rem;
             text-align: center;
@@ -298,10 +303,14 @@
             font-weight: 700;
             &:first-of-type {
                 padding: 0.8rem;
+                color:#C0504D;
+            }
+            &:last-of-type {
+                color:#4881BD;
             }
         }
         td{
-            height:13rem;
+            height:16.5rem;
             text-align: center;
             position: relative;
             &:first-of-type {
@@ -319,7 +328,6 @@
             }
             .bar_line{
                 display: block;
-                
                 width:100%;
                 position: absolute;
                 top:40px;
@@ -328,25 +336,25 @@
                 > div{
                     padding:3px 0 3px 10px;
                     text-align: left;
-                    margin-bottom:10px;
+                    margin-bottom:6px;
                     .num{
                         font-size:1.2rem;
                         font-weight: normal;
                     }
                     .name {
-                        font-size:1.4rem;
+                        font-size:1.2rem;
                         margin-left: 3px;
                     }
-                    &.blue {
+                    &.bg_blue {
                         background-color: rgba(66,109,193,0.1);
                         .num {
                             color:#426DC1;
                         }
                     }
-                    &.green {
-                        background-color: rgba(139,204,186,0.1);
+                    &.bg_red {
+                        background-color: rgba(249, 115, 122, 0.1);
                         .num {
-                            color:#8BCCBA;
+                            color:#F9737A;
                         }
                     }
                 }
@@ -355,7 +363,6 @@
     }
     .desc_area {
         padding-top:2rem;
-        height:28rem;
         span{
             font-size:1.4rem;
             font-weight: 700;
@@ -367,12 +374,35 @@
                 display: inline-block;
                 @include square(8px);
                 border-radius: 50%;
-                background-color: #426DC1;
             }
-        }
-        span + span {
-            &::before {
-                background-color: #B6E8DA;
+            &.off {
+                display: none;
+            }
+            &.dot1{
+                &::before{
+                    background-color: #F9737A;
+                }
+            }
+            &.dot2{
+                &::before{
+                    background-color: #426DC1;
+                }
+            }
+            &.dot3{
+                &::before{
+                    background-color: #B6E8DA;
+                }
+                
+            }
+            &.dot4{
+                &::before{
+                    background-color: #FFD591;
+                }
+            }
+            &.dot5{
+                &::before{
+                    background-color: #D1D6DA;
+                }
             }
         }
     }
@@ -407,28 +437,47 @@
         &:last-of-type {
             border-bottom:1px solid #E8EBF0;
             dt{
-                line-height: 31.1rem;
+                line-height: 20rem;
             }
             dd{
                 text-indent: 0;
-                height: 31.1rem;
+                height: 20rem;
                 position: relative;
                 .text {
-                    width:calc(100% - 4rem);
+                    width:calc(100% - 3rem);
                     position: absolute;
                     top:50%;
                     left:50%;
                     transform: translate(-50%,-50%);
                     line-height: 1.8;
-                    padding:2rem;
+                    padding:1.5rem;
+                    font-size:1.2rem;
+                    word-break: break-all;
                 }
             }
         }
     }
 }
+.layout_type_03 .search_icon {
+    position: absolute;
+    top:1rem;
+    right:2rem;
+    @include square(3.6rem);
+    font-size:0;
+    text-indent: -99999px;
+    background: url(../images/icon/search.svg) center no-repeat;
+    border-radius: 0.5rem;
+    border:1px solid #E8EBF0;
+}
 
 .layout_type_03  .client_input_area {
-    margin-bottom:2rem;
+    margin-bottom:1.2rem;
+    &.type{
+        input{
+            width:11.5rem;
+            margin-right:0.5rem;
+        }
+    }
     span {
         font-size:1.4rem;
         color:#5F6E81;
@@ -442,8 +491,15 @@
 .layout_type_03  .date_table_type {
     overflow-x: scroll;
     padding-bottom:1rem;
+    &.scroll_none {
+        overflow-x: visible;
+        table{
+            width:100%;
+        }
+    }
     table {
-        width:110%;
+        width:120%;
+        table-layout: fixed;
         th{
             padding: 0.8rem;
             text-align: center;
@@ -458,6 +514,11 @@
                 padding: 0.8rem;
             }
         }
+        .ellpsis{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
     }
 }
 
@@ -467,19 +528,19 @@
         border-bottom:1px solid #E8EBF0;
     }
     dl {
-        padding-top:1.8rem;
+        padding-top:1.2rem;
         &::after{
             @include clear-both;
         }
         dt{
             float:left;
-            width:10%;
+            width:12%;
             font-size:1.2rem;
             font-weight: 700;
         }
         dd{
             float:left;
-            width:calc(100% - 10%);
+            width:calc(100% - 12%);
         }
         &:last-of-type {
             padding-bottom:2rem;
@@ -561,10 +622,11 @@
         }
     }
     .table_height_cont {
-        height:98.5rem;
+        height:96.7rem;
         .date_table_type{
         //height:95rem;
         overflow-y: hidden;
+        overflow:hidden;
         }
     }
 }
@@ -572,6 +634,7 @@
 // 가망고객등록/수정 페이지 영역 
 .half_cont_type {
     margin-top:2rem;
+    padding-bottom:2rem;
     &::after{
         @include clear-both;
     }
@@ -592,19 +655,37 @@
             font-weight: 400;
         }
     }
+    .name_box{
+        border-radius: 0.5rem;
+        width:100%;
+        background-color: #F5F5F5;
+        border:1px solid #E8EBF0;
+        height: 3.6rem;
+        line-height: 3.6rem;
+        text-indent: 1rem;
+        box-sizing: border-box;
+        font-size:1.2rem;
+        font-weight: 700;
+        color:#8B95A1;
+    }
     .float_box {
+        margin-bottom:1rem;
         &::after{
             @include clear-both;
         }
         &.pt {
             padding-top:1.4rem;
         }
+        
         .left_area{
             width: 49%;
             float:left;
             margin-left:0%;
             &.pd{
                 padding-bottom:1.4rem;
+            }
+            &.mt20{
+                margin-top:2rem;
             }
             .name_input {
                 //width:27rem;
@@ -617,42 +698,90 @@
             dl {
                 padding:0;
                 dt {
-                    width:25%;
+                    width:20%;
                     &.w15{
                         width:15%;
                         margin-left:10%;
                     }
                 }
                 dd{
-                    width:calc(100% - 25%);
+                    width:calc(100% - 20%);
+                    position: relative;
+                    .hover_box {
+                        &.show{
+                            display: block;
+                        }
+                        display: none;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        z-index: 100;
+                        width: calc(28rem - 3.2rem);
+                        padding:1rem 1.6rem;
+                        font-size:1.4rem;
+                        line-height: 1.8;
+                        word-break: break-all;
+                        background-color: #333D4B;
+                        color:#fff;
+                        border-radius: 0.5rem;
+                        &::after{
+                            content: '';
+                            display: block;
+                            width:2.2rem;
+                            height:0.9rem;
+                            position: absolute;
+                            top:-0.08rem;
+                            left:50%;
+                            transform: translateY(-50%);
+                            z-index: 100;
+                            background: url(../images/icon/speech_icon.svg) top center no-repeat;
+                        }
+                    }
                 }
             }
+            
         }
         .left_area +.left_area{
             margin-left:2%;
             float: right;
             dl {
                 margin-top:1rem;
+                &.mt{
+                    margin-top:2rem;
+                }
             }
         }
     }
     dl {
-        padding-top:1.6rem;
+        padding-top:1rem;
         &::after{
             @include clear-both;
         }
         dt{
             float:left;
-            width:12%;
+            width:10%;
             font-size:1.2rem;
             font-weight: 700;
         }
         dd{
-            float:left;
-            width:calc(100% - 12%);
+            float:right;
+            width:calc(100% - 10%);
         }
         &:last-of-type {
             padding-bottom:0rem;
+        }
+    }
+    .line_box{
+        margin-top:3rem;
+        padding:1.5rem 0;
+        border-top:1px solid #E8EBF0;
+        dl{
+            dt{
+                width:12%;
+            }
+            dd{
+                width: calc(100% - 12%);
+            }
         }
     }
     .radio_area {
@@ -674,6 +803,9 @@
             border-radius: 5px;
             border:1px solid #E8EBF0;
             margin-right:1rem;
+            &.width100 {
+                width: 93%;
+            }
             &.width {
                 width:19rem;
                 .current {
@@ -691,7 +823,7 @@
     textarea {
         width:calc(100% - 2rem);
         padding:1rem;
-        height:5rem;
+        height:3rem;
         border-radius: 5px;
         border:1px solid #E8EBF0;
         background-color: #FAFAFA;
@@ -750,23 +882,34 @@
 }
 
 .half_cont_type .input_cont_area {
+    &::after{
+        @include clear-both;
+    }
+
     dl {
+        float:right;
+        width:50%;
+        &::after{
+            @include clear-both;
+        }
         dt {
+            width: 20%;
+            float:left;
             font-size:1.4rem;
             color:#5F6E81;
-            margin-bottom:0.9rem;
+            // margin-bottom:0.9rem;
+            margin-top:1rem;
         }
         dd {
             input {
-                width: calc(100% - 8rem);
+                max-width: 22.4rem;
                 margin-right:1rem;
             }
         }
     }
-}
-.half_cont_type .table_list_cont {
     .radio_area {
-        padding:2rem 0;
+        float:left;
+        margin-top:1rem;
         &::after{
             @include clear-both;
         }
@@ -775,9 +918,13 @@
             margin-right:2rem;
         }
     }
+}
+.half_cont_type .table_list_cont {
+    
     .table_box_area {
+        margin-top:2rem;
         .area{
-            height:55.5rem;
+            height:69rem;
             overflow-y: scroll;
             table {
                 th:first-of-type {
@@ -796,11 +943,12 @@
         @include clear-both;
     }
     .page_tit_area {
-        float:left;
+        // float:left;
         width:50%;
     }
     .right_lookup_cont {
-        float:right;
+        // float:right;
+        margin-bottom:2rem;
         &::after{
             @include clear-both;
         }
@@ -821,7 +969,7 @@
             }
         }
         .month_select_area {
-            float:left;
+            float:right;
             &::after{
                 @include clear-both;
             }
@@ -834,17 +982,6 @@
                 margin-right:1rem;
                 margin-left:3rem;
                 position: relative;
-                &::after {
-                    position: absolute;
-                    top:50%;
-                    left:-2rem;
-                    transform: translateY(-50%);
-                    content:'';
-                    display: block;
-                    width:1px;
-                    height:16px;
-                    background-color: #D1D6DA;
-                }
             }
             .select_box {
                 float: left;
@@ -928,6 +1065,11 @@
             @include clear-both;
         }
         &.type {
+            .half_cont_box {
+                float: left;
+                width:calc(50% - 1rem);
+                margin-right:2rem;
+            }
             .cont_box{
                 height:36rem;
             }
@@ -959,49 +1101,59 @@
                 left:0;
                 transform: translateY(-50%);
             }
-            &.green {
-                &::after{
-                    background-color:#CAE3D0;
-                }
-            }
-            &.blue {
+            &.blue1 {
                 &::after{
                     background-color:#426DC1;
                 }
             }
-            &.yellow {
+            &.blue2 {
                 &::after{
-                    background-color:#FFD591;
+                    background-color:#5683DB;
                 }
             }
-            &.gray {
+            &.blue3 {
                 &::after{
-                    background-color:#D1D6DA;
+                    background-color:#97BAFD;
+                }
+            }
+            &.blue4 {
+                &::after{
+                    background-color:#CFDEFC;
+                }
+            }
+            &.red1 {
+                &::after{
+                    background-color:#F9737A;
+                }
+            }
+            &.red2 {
+                &::after{
+                    background-color:#FF9DA2;
+                }
+            }
+            &.red3 {
+                &::after{
+                    background-color:#FFB9BC;
+                }
+            }
+            &.red4 {
+                &::after{
+                    background-color:#FFD9DB;
                 }
             }
         }
     }
-    .cont_box + .cont_box {
+    .half_cont_box {
         float: right;
-    }
-    .cont_box {
-        .half_box {
+        width:calc(50% - 1rem);
+        .cont_box {
             float:left;
-            width:50%;
+            // width:50%;
             position: relative;
-            &.bar {
-                &::after {
-                    position: absolute;
-                    top:50%;
-                    right: 0;
-                    transform: translateY(-50%);
-                    content: '';
-                    display: block;
-                    width:1px;
-                    height:35rem;
-                    background-color: #E8EBF0;
-                }
-            }
+            background-color: #fff;
+        }
+        .cont_box + .cont_box {
+            float: right;
         }
     }
     .box1_desc{
@@ -1013,10 +1165,11 @@
             color:#8B95A1;
             display: inline-block;
             position: relative;
+            margin-left:4rem;
             &::after {
                 position: absolute;
                 top:50%;
-                left:-1rem;
+                left:-2.5rem;
                 transform: translateY(-50%);
                 content: '';
                 display: block;
@@ -1039,7 +1192,7 @@
     }
     .graph_type_02 {
         width:28rem;
-        margin: 6rem auto;
+        margin: 8rem auto;
         position: relative;
         .txt_box {
             text-align: center;
@@ -1060,12 +1213,12 @@
     }
     .graph_type_04 {
         width:95%;
-        margin:5rem auto 2rem;
+        margin:7rem auto 2rem;
     }
 
     .radio_area {
         position: absolute;
-        top:0.2rem;
+        top:2.2rem;
         right:2rem;
         &::after{
             @include clear-both;
@@ -1091,15 +1244,18 @@
             // width:16.66666%;
 
             .img {
-                width:6rem;
+                width: 14.7rem;
+                height: 4rem;
+                margin-bottom:1.3rem;
             }
             dl {
                 dt{
                     font-size:1.6rem;
-                    font-weight: 700;
+                    font-weight: 400;
                     span{
                         font-size:3.4rem;
                         margin-right:1rem;
+                        font-weight: 700;
                     }
                 }
                 dd{
@@ -1112,7 +1268,6 @@
         }
     }
 }
-
 .data_table_cont {
     padding-bottom:2rem;
     .cont_box {
@@ -1127,12 +1282,12 @@
             }
             td{
                 padding:1rem 1.5rem; 
-                text-align: center;
+                text-align: right;
                 &:first-of-type {
                     background-color: #F4F5F7;
                     font-weight: 400;
                     color:#445365;
-                    text-align: left;
+                    text-align: center;
                 }
                 &.tit_box{
                     background-color: #F4F5F7;
@@ -1154,7 +1309,8 @@
 
 
 .total_lookup_cont {
-    padding:2rem 0;
+    padding:0rem 0 2rem 0;
+    position: relative;
     &::after{
         @include clear-both;
     }
@@ -1208,9 +1364,19 @@
     }
 
     .month_select_area {
-        float:left;
+        position: absolute;
+        top:0;
+        right:0;
         &::after{
             @include clear-both;
+        }
+        span{
+            display:block;
+            float:left;
+            margin:0 0.6rem;
+            font-size:1.4rem;
+            color:#5F6E81;
+            margin-top:1rem;
         }
         .sec_tit {
             font-size:1.4rem;
@@ -1236,6 +1402,7 @@
 }
 
 .bond_cont_wrap {
+    position: relative;
     .sub_tit {
         font-size:1.6rem;
         color:#8B95A1;
@@ -1253,6 +1420,34 @@
             margin-right:1rem;
         }
     }
+    .seach_cont_area {
+        position: absolute;
+        top:1.5rem;
+        right:2rem;
+        &::after {
+            @include clear-both;
+        }
+        
+        .tit_text{
+            float:left;
+            font-size:1.4rem;
+            color:#5F6E81;
+            margin-top:1rem;
+            margin-right:1rem;
+        }
+        .right_area {
+            float: left;
+            width:35rem;
+            input {
+                background: url(../images/icon/search_02.svg) center right 1rem no-repeat #fff;
+                font-weight: 700;
+                &::placeholder{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
     .table_type_01 {
         table{
             width: 100%;
@@ -1310,10 +1505,10 @@
     }
 
     .scroll_table_type {
-        overflow-x: scroll;
-        padding-bottom: 1rem;
+        // overflow-x: scroll;
+        //padding-bottom: 1rem;
         table{
-            width: 105%;
+            width: 100%;
             th{
                 text-align: center;
                 padding:0.8rem;
@@ -1331,14 +1526,14 @@
         }
     }
     .table_type_01 {
-        padding-bottom: 1rem;
+        //padding-bottom: 1rem;
         table{
             width: 100%;
             th{
                 text-align: center;
                 padding:0.8rem;
                 &:nth-of-type(3){
-                    text-align: left;
+                    // text-align: left;
                 }
             }
             td{
@@ -1350,6 +1545,31 @@
             }
         }
     }
+    .input_cont_area {
+        position: absolute;
+        top:1.2rem;
+        right:2rem;
+        &::after{
+            @include clear-both;
+        }
+        .input_box {
+            float:left;
+            margin-left:2rem;
+            span{
+                font-size:1.4rem;
+                color:#5F6E81;
+                margin-right:1rem;
+            }
+            input[type="text"]{
+                width: 12rem;
+                &:disabled{
+                    background: #F4F5F7;
+                    color:#8B95A1;
+                }
+            }
+        }
+    }
+
 }
 
 // 마이페이지_마이페이지
@@ -1359,6 +1579,7 @@
     }
 
     .cont_box{
+        position: relative;
         &::after{
             @include clear-both;
         }
@@ -1585,14 +1806,14 @@
         transform: translate(-50%, -50%);
         width: 1.6rem;
         height: 1.6rem;
-        background: url(../images/icon/radio_off.svg) center no-repeat;
+        background: url(../images/icon/radio_off_02.svg) center no-repeat;
         background-size: contain;
     }
     input[type="radio"]:checked+label {
         font-weight: 700;
     }
     input[type="radio"]:checked+label:after {
-        background: url(../images/icon/radio_on.svg) center no-repeat;
+        background: url(../images/icon/radio_on_02.svg) center no-repeat;
         background-size: contain;
     }
     }

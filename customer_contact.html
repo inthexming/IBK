@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>title</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="css/common/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/layout-prefix.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="css/header.css" type="text/css"/>
+    <link rel="stylesheet" href="css/leftmenu.css" type="text/css"/>
+
+    <!-- 페이지 Css -->
+    <link rel="stylesheet" href="css/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="css/modal.css" type="text/css"/>
+
+    <!-- 공통 JS -->
+    <script src="js/common/jquery-3.5.1.min.js"></script>
+    <script src="js/common/leftmenu.js"></script>
+
+    <!-- 페이지 JS -->
+    <script>
+        $(document).ready(function(){
+            // 고객검색 팝업
+            $('.search_btn').click(function(){
+                $('.modal_cont_wrap').show();
+            });
+            $('.close_btn').click(function(){
+                $('.modal_cont_wrap').hide();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!-- start of :: wrap -->
+    <div id="wrap">
+        <!-- start of :: header -->
+        <div id="header">
+            <div class="header_inner">
+                <h1 class="logo"><a href="#none">IBKS HUB</a></h1>
+                <div class="right_cont_area">
+                    <ul class="page_link_list">
+                        <li><a href="#none">관리고객동향</a></li>
+                        <li><a href="#none">마이페이지</a></li>
+                        <li><a href="#none">신용공여관리 현황</a></li>
+                        <li><a href="#none">접촉일정</a></li>
+                    </ul>
+                    <div class="user_info_area">
+                        <div class="img_box">
+                            <img src="images/icon/user.svg" alt="유저이미지">
+                        </div>
+                        <dl>
+                            <dt>홍길동</dt>
+                            <dd>강남센터</dd>
+                        </dl>
+                        <a href="#none" class="dropIcon"></a>
+                        <div class="dropdown_cont_area">
+                            <div class="info_box">
+                                <div class="img_box">
+                                    <img src="images/icon/user.svg" alt="유저이미지">
+                                </div>
+                                <dl>
+                                    <dt>홍길동</dt>
+                                    <dd>강남센터</dd>
+                                </dl>
+                            </div>
+                            <div class="logout_area">
+                                <a href="#none">로그아웃</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of :: header -->
+        <!-- start of :: contents -->
+        <div id="content">
+            <div class="inner">
+                <div class="leftMenu_wrap">
+                    <div class="inner">
+                        <ul class="nav_cont_list">
+                            <li>
+                                <a href="#none" class="nav_01"><i></i>마이페이지</a>
+                                <div class="dep_menu">
+                                    <ul>
+                                        <li><a href="#none">마이페이지</a></li>
+                                        <li><a href="#none">화면설정</a></li>
+                                        <li><a href="#none" class="on">결합계좌관리</a></li>
+                                        <li><a href="#none">고객그룹관리</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_02 active"><i></i>고객접촉</a>
+                                <div class="dep_menu show">
+                                    <p>종합일정관리</p>
+                                    <ul>
+                                        <li><a href="#none" class="on">접촉일정</a></li>
+                                        <li><a href="#none">금융상품만기/이자일정</a></li>
+                                        <li><a href="#none">신용공여만기일정</a></li>
+                                        <li><a href="#none">권리일정</a></li>
+                                    </ul>
+                                    <p>접촉관리</p>
+                                    <ul>
+                                        <li><a href="#none">접촉예정 고객 현황</a></li>
+                                        <li><a href="#none">가망고객등록/수정</a></li>
+                                        <li><a href="#none">접촉활동현황</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_03"><i></i>고객관리</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_04"><i></i>고객분석</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_05"><i></i>금융상품</a>
+                                <div class="dep_menu">
+                                    <ul>
+                                        <li><a href="#none">금융상품 판매 현황</a></li>
+                                        <li><a href="#none">채권/CP 종합정보</a></li>
+                                        <li><a href="#none">펀드종합정보</a></li>
+                                        <li><a href="#none">WRAP종합정보</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_06"><i></i>영업성과</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="nav_07"><i></i>캠페인 관리</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pageCont_wrap pb10">
+                    <div class="inner">
+                        <div class="page_tit_area">
+                            <p class="tit">접촉일정</p>
+                            <button type="button" class="mark_btn"></button>
+                            <button type="button" class="msg_icon"></button>
+                            <div class="select_cont_area">
+                                <span class="select_tit">IBKWMT센터 일산지점</span>
+                                <div class="select_box">
+                                    <p class="selected-type">홍길동</p>
+                                    <ul class="select_list scroll_y">
+                                        <li>홍길동</li>
+                                        <li>홍길동</li>
+                                        <li>홍길동</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="layout_type_03">
+                            <div class="cont_box left_box">
+                                <div class="cont_tit">2021년 10월</div>
+                                <div class="arrow_btn_area">
+                                    <button class="icon">left</button>
+                                    <button class="icon">right</button>
+                                </div>
+                                <div class="calendar_cont_area">
+                                    <table>
+                                        <colgroup>
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>SUN</th>
+                                                <th>MON</th>
+                                                <th>TUE</th>
+                                                <th>WED</th>
+                                                <th>THU</th>
+                                                <th>FRI</th>
+                                                <th>SAT</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="red">1</p>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <p>2</p>
+                                                    <div class="bar_line">
+                                                        <div class="bg_blue">
+                                                            <span class="num">10</span>
+                                                            <span class="name">홍길동</span>
+                                                        </div>
+                                                        <div class="bg_red">
+                                                            <span class="num">12</span>
+                                                            <span class="name">홍길동</span>
+                                                        </div>
+                                                        <div class="bg_red">
+                                                            <span class="num">12</span>
+                                                            <span class="name">홍길동</span>
+                                                        </div>
+                                                        <div class="bg_red">
+                                                            <span class="num">12</span>
+                                                            <span class="name">홍길동</span>
+                                                        </div>
+                                                        <div class="bg_red">
+                                                            <span class="num">12</span>
+                                                            <span class="name">홍길동</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p>3</p>
+                                                </td>
+                                                <td>
+                                                    <p>4</p>
+                                                </td>
+                                                <td>
+                                                    <p>5</p>
+                                                </td>
+                                                <td>
+                                                    <p>6</p>
+                                                </td>
+                                                <td>
+                                                    <p class="blue">7</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="red">8</p>
+                                                </td>
+                                                <td>
+                                                    <p>9</p>
+                                                </td>
+                                                <td>
+                                                    <p>10</p>
+                                                </td>
+                                                <td>
+                                                    <p>11</p>
+                                                </td>
+                                                <td>
+                                                    <p>12</p>
+                                                    <div class="bar_line">
+                                                        <div class="bg_blue">
+                                                            <span class="num">10</span>
+                                                            <span class="name">홍길동</span>
+                                                        </div>
+                                                        <div class="bg_red">
+                                                            <span class="num">12</span>
+                                                            <span class="name">홍길동</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p>13</p>
+                                                </td>
+                                                <td>
+                                                    <p class="blue">14</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="red">15</p>
+                                                </td>
+                                                <td>
+                                                    <p>16</p>
+                                                </td>
+                                                <td>
+                                                    <p>17</p>
+                                                </td>
+                                                <td>
+                                                    <p>18</p>
+                                                </td>
+                                                <td>
+                                                    <p>19</p>
+                                                </td>
+                                                <td>
+                                                    <p>20</p>
+                                                </td>
+                                                <td>
+                                                    <p class="blue">21</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="red">22</p>
+                                                </td>
+                                                <td>
+                                                    <p>23</p>
+                                                </td>
+                                                <td>
+                                                    <p>24</p>
+                                                </td>
+                                                <td>
+                                                    <p>25</p>
+                                                </td>
+                                                <td>
+                                                    <p>26</p>
+                                                </td>
+                                                <td>
+                                                    <p>27</p>
+                                                </td>
+                                                <td>
+                                                    <p class="blue">28</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="red">29</p>
+                                                </td>
+                                                <td>
+                                                    <p>30</p>
+                                                </td>
+                                                <td>
+                                                    <p>31</p>
+                                                </td>
+                                                <td>
+                                                    <p class="op">1</p>
+                                                </td>
+                                                <td>
+                                                    <p class="op">2</p>
+                                                </td>
+                                                <td>
+                                                    <p class="op">3</p>
+                                                </td>
+                                                <td>
+                                                    <p class="op">4</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- class off 제거시 활성화 -->
+                                    <div class="desc_area">
+                                        <span class="dot1">가망고객</span>
+                                        <span class="dot2">관리고객</span>
+                                        <span class="dot3 off">채권</span>
+                                        <span class="dot4 off">펀드</span>
+                                        <span class="dot5 off">신탁</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cont_box center_box">
+                                <div class="cont_tit">고객 기본정보</div>
+                                <button class="search_btn"><i></i>고객 검색</button>
+                                <div class="info_desc_area">
+                                    <dl>
+                                        <dt>고객분류</dt>
+                                        <dd>희망 or 희망하지 않음</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>계좌번호</dt>
+                                        <dd>*************</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>고객구분</dt>
+                                        <dd>개인 or 법인</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>고객명</dt>
+                                        <dd>홍길동</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>성별</dt>
+                                        <dd>남성</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>연령대</dt>
+                                        <dd>40대</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>투자성향</dt>
+                                        <dd>적극투자형</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>투자권유</dt>
+                                        <dd>희망 or 희망하지 않음</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>관심상품</dt>
+                                        <dd>해외주식</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>가망자산</dt>
+                                        <dd>-</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>전일 예탁자산</dt>
+                                        <dd>15,000,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>최근 거래일</dt>
+                                        <dd>2021-01-01</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>최근 접촉일</dt>
+                                        <dd>2021-01-01</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>주소지</dt>
+                                        <dd>서울시 광진구 군자동</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>핸드폰</dt>
+                                        <dd>010-0000-0000</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>이메일</dt>
+                                        <dd>email@email.com</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>본인 생일</dt>
+                                        <dd>6월 1일</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>본인 기념일</dt>
+                                        <dd>12월 24일</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>유치 확률</dt>
+                                        <dd>-</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>F1</dt>
+                                        <dd>동의</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>F6(전화)</dt>
+                                        <dd>N</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>F6(이메일)</dt>
+                                        <dd>N</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>F6(SMS)</dt>
+                                        <dd>Y</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>메모</dt>
+                                        <dd>
+                                            <div class="text">
+                                                파워베이스 최근 메모<br>
+                                                파워베이스 최근 메모<br>
+                                                파워베이스 최근 메모<br>
+                                                파워베이스 최근 메모<br>
+                                                파워베이스 최근 메모<br>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="right_box">
+                                <div class="cont_box">
+                                    <div class="cont_tit">접촉이력</div>
+                                    <div class="client_input_area type">
+                                        <span>고객명</span>
+                                        <input type="text" value="삼성길동" disabled>
+                                        <input type="text" value="001-10-999999" disabled>
+                                        <input type="text" value="그룹 미지정" disabled>
+                                        <input type="text" value="가망고객" disabled>
+                                    </div>
+                                    <div class="date_table_type scroll_x">
+                                        <table>
+                                            <colgroup>
+                                                <col width="15%">
+                                                <col width="10%">
+                                                <col width="*">
+                                                <col width="*">
+                                                <col width="*">
+                                                <col width="20%">
+                                                <col width="*">
+                                                <col width="10%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>접촉일시</th>
+                                                    <th>상태</th>
+                                                    <th>방식</th>
+                                                    <th>구분</th>
+                                                    <th>접촉목적</th>
+                                                    <th>내용</th>
+                                                    <th>반응</th>
+                                                    <th>추가</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>05-31 19:00</td>
+                                                    <td>예정</td>
+                                                    <td>방문</td>
+                                                    <td>국내주식</td>
+                                                    <td>상담</td>
+                                                    <td class="ellpsis">XX주가 전망에...</td>
+                                                    <td>양호</td>
+                                                    <td class="ellpsis">유…</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05-31 19:00</td>
+                                                    <td>예정</td>
+                                                    <td>방문</td>
+                                                    <td>국내주식</td>
+                                                    <td>상담</td>
+                                                    <td class="ellpsis">XX주가 전망에...</td>
+                                                    <td>양호</td>
+                                                    <td class="ellpsis">유…</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05-31 19:00</td>
+                                                    <td>예정</td>
+                                                    <td>방문</td>
+                                                    <td>국내주식</td>
+                                                    <td>상담</td>
+                                                    <td class="ellpsis">XX주가 전망에...</td>
+                                                    <td>양호</td>
+                                                    <td class="ellpsis">유…</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05-31 19:00</td>
+                                                    <td>예정</td>
+                                                    <td>방문</td>
+                                                    <td>국내주식</td>
+                                                    <td>상담</td>
+                                                    <td class="ellpsis">XX주가 전망에...</td>
+                                                    <td>양호</td>
+                                                    <td class="ellpsis">유…</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05-31 19:00</td>
+                                                    <td>예정</td>
+                                                    <td>방문</td>
+                                                    <td>국내주식</td>
+                                                    <td>상담</td>
+                                                    <td class="ellpsis">XX주가 전망에...</td>
+                                                    <td>양호</td>
+                                                    <td class="ellpsis">유…</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05-31 19:00</td>
+                                                    <td>예정</td>
+                                                    <td>방문</td>
+                                                    <td>국내주식</td>
+                                                    <td>상담</td>
+                                                    <td class="ellpsis">XX주가 전망에...</td>
+                                                    <td>양호</td>
+                                                    <td class="ellpsis">유…</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="page_navigation_area">
+                                        <div class="area">
+                                            <span href="#none" class="prev b_prev"></span>
+                                            <span href="#none" class="prev_txt">이전</span>
+                                            <span href="#none" class="next_txt active">다음</span>
+                                            <span href="#none" class="next a_next"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont_box mt15">
+                                    <div class="cont_tit tab_tit">
+                                        <button type="button" class="on">신규일정등록</button>
+                                        <button type="button">수정/결과등록</button>
+                                    </div>
+                                    <button type="button" class="search_icon">검색</button>
+                                    <div class="client_input_area type">
+                                        <span>고객명</span>
+                                        <input type="text" value="삼성길동" disabled>
+                                        <input type="text" value="001-10-999999" disabled>
+                                        <input type="text" value="그룹 미지정" disabled>
+                                        <input type="text" value="가망고객" disabled>
+                                    </div>
+                                    <div class="form_cont_area">
+                                        <div class="dl_area">
+                                            <dl>
+                                                <dt>접촉방식</dt>
+                                                <dd>
+                                                    <div class="radio_area">
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="cont_01" name="contact" checked>
+                                                            <label for="cont_01">방문</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="cont_02" name="contact">
+                                                            <label for="cont_02">내방</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="cont_03" name="contact">
+                                                            <label for="cont_03">전화</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="cont_04" name="contact">
+                                                            <label for="cont_04">기타</label>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="mt10">접촉일시</dt>
+                                                <dd>
+                                                    <div class="select_area">
+                                                        <div class="minical_area">
+                                                            <button type="button" class="calendar_btn"></button>
+                                                            <input type="text" value="2021-10-10" disabled>
+                                                        </div>
+                                                        <div class="select_box">
+                                                            <p class="selected-type">8시</p>
+                                                            <ul class="select_list scroll_y">
+                                                                <li>8시</li>
+                                                                <li>9시</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="mt10">접촉장소</dt>
+                                                <dd>
+                                                    <input type="text" placeholder="방문 등의 경우 약속장소 또는 주소를 입력하세요. (한글기준 20자 이내)">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="mt10">상품구분</dt>
+                                                <dd>
+                                                    <div class="select_area">
+                                                        <div class="select_box">
+                                                            <p class="selected-type">상품선택</p>
+                                                            <ul class="select_list scroll_y">
+                                                                <li>상품선택</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>접촉목적</dt>
+                                                <dd>
+                                                    <div class="radio_area">
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_01" name="purpose" checked>
+                                                            <label for="pur_01">상담</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_02" name="purpose">
+                                                            <label for="pur_02">상품설명</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_03" name="purpose">
+                                                            <label for="pur_03">상품제안</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_04" name="purpose">
+                                                            <label for="pur_04">계좌관리</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_05" name="purpose">
+                                                            <label for="pur_05">자료제공</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_06" name="purpose">
+                                                            <label for="pur_06">일상접촉</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radio_area mt10">
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_07" name="purpose">
+                                                            <label for="pur_07">정기모임</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="pur_08" name="purpose">
+                                                            <label for="pur_08">기타</label>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>내용</dt>
+                                                <dd>
+                                                    <textarea placeholder="접촉했던 사항에 대해 기록이 필요한 사항 기재 (한글기준 500자 이내)"></textarea>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>접촉결과</dt>
+                                                <dd>
+                                                    <div class="radio_area">
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="resu_01" name="result" checked>
+                                                            <label for="resu_01">매우좋음</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="resu_02" name="result">
+                                                            <label for="resu_02">좋음</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="resu_03" name="result">
+                                                            <label for="resu_03">보통</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="resu_04" name="result">
+                                                            <label for="resu_04">회의적</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="resu_05" name="result">
+                                                            <label for="resu_05">관심없음</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="resu_06" name="result">
+                                                            <label for="resu_06">기타</label>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>유치확률</dt>
+                                                <dd>
+                                                    <div class="radio_area">
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_01" name="percentage" checked>
+                                                            <label for="per_01">0%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_02" name="percentage">
+                                                            <label for="per_02">10%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_03" name="percentage">
+                                                            <label for="per_03">20%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_04" name="percentage">
+                                                            <label for="per_04">30%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_05" name="percentage">
+                                                            <label for="per_05">40%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_06" name="percentage">
+                                                            <label for="per_06">50%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_07" name="percentage">
+                                                            <label for="per_07">60%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_08" name="percentage">
+                                                            <label for="per_08">70%</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radio_area mt10">
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_09" name="percentage">
+                                                            <label for="per_09">80%</label>
+                                                        </div>
+                                                        <div class="radio_cont">
+                                                            <input type="radio" id="per_10" name="percentage">
+                                                            <label for="per_10">90%</label>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="mt10">추가요청</dt>
+                                                <dd>
+                                                    <input type="text" placeholder="접촉고객이 추가로 요청한 사항이 있으면 기재 (한글기준 80자 이내)">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="btn_area">
+                                            <input type="submit" value="삭제하기" class="btn line_btn">
+                                            <input type="reset" value="지우기" class="btn line_btn">
+                                            <input type="submit" value="저장하기" class="btn base_btn">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of :: contents -->
+    </div>
+    <!-- end of :: wrap -->
+
+    <!-- 모달 : 고객/계좌 조회 영역 -->
+    <article class="modal_cont_wrap">
+        <div class="modal_area">
+            <div class="table_cont_area">
+                <button class="close_btn"></button>
+                <div class="cont_box">
+                    <p class="cont_tit">고객/계좌 조회</p>
+                    <div class="lookup_cont_area">
+                        <div class="select_box type">
+                            <p class="selected-type">계좌명</p>
+                            <ul class="select_list scroll_y">
+                                <li>계좌명</li>
+                                <li>계좌명</li>
+                                <li>계좌명</li>
+                                <li>계좌명</li>
+                            </ul>
+                        </div>
+                        <div class="input_box">
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                            <button class="base_btn half">조회</button>
+                        </div>
+                    </div>
+                    <div class="table_box_area">
+                        <div class="area scroll_y">
+                            <table>
+                                <colgroup>
+                                    <col width="*">
+                                    <col width="*">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            계좌명(가망고객별칭)
+                                        </th>
+                                        <th>계좌번호</th>
+                                        <th>영업점명</th>
+                                    </tr>
+                                    
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가나다라마바사</td>
+                                        <td>001-10-0000000</td>
+                                        <td>IBKWM센터 동부이촌동</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- // 모달 : 고객/계좌 조회 영역 -->
+</body>
+
+</html>

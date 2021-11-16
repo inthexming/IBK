@@ -45,6 +45,19 @@
   font-size: 1.6rem;
 }
 
+.cont_box .cont_tit.tab_tit button {
+  color: #8B95A1;
+  font-size: 1.6rem;
+  margin-right: 2rem;
+}
+
+.cont_box .cont_tit.tab_tit button.on {
+  font-weight: 700;
+  padding-bottom: 3px;
+  color: #333D4B;
+  border-bottom: 2px solid #426DC1;
+}
+
 .base_btn {
   border-radius: 5px;
   padding: 0.9rem 2rem;
@@ -162,6 +175,10 @@ table th:last-of-type {
 
 table th:first-of-type {
   padding: 0.8rem 0;
+}
+
+table th:first-of-type input[type="checkbox"] + label:after {
+  background: url(../images/icon/checkbox_off_02.svg) center no-repeat;
 }
 
 table td {
@@ -316,6 +333,15 @@ input[type="radio"]:checked + label:after {
   font-size: 1.4rem;
 }
 
+.select_box.cal {
+  background: url(../images/icon/calendar.svg) top 1rem left 1rem no-repeat #fff;
+}
+
+.select_box.cal .selected-type {
+  padding-left: 1rem;
+  text-indent: 2.5rem;
+}
+
 .select_box .selected-type {
   width: calc(100% - 1rem);
   height: 3.4rem;
@@ -385,35 +411,96 @@ input[type="radio"]:checked + label:after {
   text-align: center;
 }
 
-.page_navigation_area .area a {
+.page_navigation_area .area span {
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 700;
   color: #8B95A1;
   vertical-align: middle;
+  cursor: pointer;
 }
 
-.page_navigation_area .area a.prev {
+.page_navigation_area .area span.active {
+  color: #012A50;
+}
+
+.page_navigation_area .area span.prev {
   width: 24px;
   height: 24px;
   background: url(../images/icon/prev.svg) center no-repeat;
 }
 
-.page_navigation_area .area a.prev.b_prev {
+.page_navigation_area .area span.prev.b_prev {
   background: url(../images/icon/b_prev.svg) center no-repeat;
 }
 
-.page_navigation_area .area a.next_txt {
-  color: #012A50;
-  margin-left: 4rem;
+.page_navigation_area .area span.prev.b_prev.active {
+  background: url(../images/icon/b_prev_on.svg) center no-repeat;
 }
 
-.page_navigation_area .area a.next {
+.page_navigation_area .area span.prev_txt {
+  background: url(../images/icon/prev.svg) left center no-repeat;
+  padding-left: 3rem;
+}
+
+.page_navigation_area .area span.prev_txt.active {
+  background: url(../images/icon/prev_on.svg) left center no-repeat;
+}
+
+.page_navigation_area .area span.next_txt {
+  margin-left: 3rem;
+  padding-right: 3rem;
+  background: url(../images/icon/next.svg) center right no-repeat;
+}
+
+.page_navigation_area .area span.next_txt.active {
+  background: url(../images/icon/next_on.svg) center right no-repeat;
+}
+
+.page_navigation_area .area span.next {
   width: 24px;
   height: 24px;
   background: url(../images/icon/next.svg) center no-repeat;
 }
 
-.page_navigation_area .area a.next.a_next {
+.page_navigation_area .area span.next.a_next {
   background: url(../images/icon/a_next.svg) center no-repeat;
+}
+
+.page_navigation_area .area span.next.a_next.active {
+  background: url(../images/icon/a_next_on.svg) center no-repeat;
+}
+
+.minical_area {
+  width: 13rem;
+  float: left;
+  border: 1px solid #E8EBF0;
+  border-radius: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: 1rem;
+}
+
+.minical_area .calendar_btn {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../images/icon/calendar.svg) center no-repeat;
+  float: left;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.minical_area input {
+  width: calc(100% - 2.6rem);
+  border: none;
+  background-color: transparent;
+  height: 3.4rem;
+  line-height: 3.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.minical_area input:disabled {
+  background-color: transparent;
+  color: #333D4B;
 }

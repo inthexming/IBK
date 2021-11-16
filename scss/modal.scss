@@ -72,3 +72,33 @@
         }
     }
 }
+
+.search_cont_type {
+    .chk_box {
+        padding:1.1rem 2rem;
+        text-align: right;
+        /* 체크 박스 css */
+        input[type="checkbox"] + label {
+            position: relative;
+            padding-left: 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #012A50; /* text color*/
+        }
+
+        input[type="checkbox"] + label:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0,-50%);
+            width: 1.6rem;  /* icon size*/
+            height: 1.6rem; /* icon size*/
+            background: url(../images/icon/checkbox_off.svg) center no-repeat;
+        }
+
+        input[type="checkbox"]:checked + label:after {
+            background: url(../images/icon/checkbox_on.svg) center no-repeat;
+        }
+    }
+}
