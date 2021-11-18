@@ -359,13 +359,13 @@
 }
 
 .calendar_cont_area table td {
-  height: 16.5rem;
   text-align: center;
   position: relative;
+  padding: 0;
 }
 
 .calendar_cont_area table td:first-of-type {
-  padding: 0.8rem;
+  padding: 0rem;
 }
 
 .calendar_cont_area table td p {
@@ -382,13 +382,10 @@
 }
 
 .calendar_cont_area table td .bar_line {
+  min-height: 15rem;
   display: block;
   width: 100%;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  margin-top: 3rem;
 }
 
 .calendar_cont_area table td .bar_line > div {
