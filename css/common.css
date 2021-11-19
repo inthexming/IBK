@@ -493,11 +493,12 @@ input[type="radio"]:checked + label:after {
 .minical_area input {
   width: calc(100% - 2.6rem);
   border: none;
-  background-color: transparent;
+  background: url(../images/icon/calendar.svg) left 1rem center no-repeat;
   height: 3.4rem;
   line-height: 3.4rem;
   font-weight: 700;
   font-size: 1.2rem;
+  text-indent: 2.5rem;
 }
 
 .minical_area input:disabled {

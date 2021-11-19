@@ -496,10 +496,14 @@
 }
 
 .layout_type_03  .client_input_area {
+    &::after{
+        @include clear-both;
+    }
     margin-bottom:1.2rem;
     &.type{
         input{
             width:11.5rem;
+            max-width: 20rem;
             margin-right:0.5rem;
         }
     }
@@ -507,10 +511,13 @@
         font-size:1.4rem;
         color:#5F6E81;
         margin-right:1rem;
+        float: left;
     }
     input{
         width:12rem;
         margin-right:1rem;
+        float: left;
+        display: block;
     }
 }
 .layout_type_03  .date_table_type {

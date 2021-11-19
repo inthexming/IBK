@@ -17,9 +17,11 @@
     <!-- 페이지 Css -->
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
     <link rel="stylesheet" href="css/modal.css" type="text/css"/>
+    <link rel="stylesheet" href="css/common/jquery-ui.css" type="text/css"/>
 
     <!-- 공통 JS -->
     <script src="js/common/jquery-3.5.1.min.js"></script>
+    <script src="js/common/jquery-ui.js"></script>
     <script src="js/common/leftmenu.js"></script>
 
     <!-- 페이지 JS -->
@@ -32,6 +34,11 @@
             $('.close_btn').click(function(){
                 $('.modal_cont_wrap').hide();
             });
+            // 미니캘린더
+            $(".calender_box").datepicker({
+                dateFormat: 'yy-mm-dd' //Input Display Format 변경      
+            });      
+            $('.calender_box').datepicker().datepicker("setDate", new Date());
         });
     </script>
 
@@ -492,7 +499,7 @@
                                     <div class="cont_tit">접촉이력</div>
                                     <div class="client_input_area type">
                                         <span>고객명</span>
-                                        <input type="text" value="삼성길동" disabled>
+                                        <input type="text" value="한국한국한국한국한국한국한국한국한국한국" disabled>
                                         <input type="text" value="001-10-999999" disabled>
                                         <input type="text" value="그룹 미지정" disabled>
                                         <input type="text" value="가망고객" disabled>
@@ -637,8 +644,8 @@
                                                 <dd>
                                                     <div class="select_area">
                                                         <div class="minical_area">
-                                                            <button type="button" class="calendar_btn"></button>
-                                                            <input type="text" value="2021-10-10" disabled>
+                                                            <!-- <button type="button" class="calendar_btn"></button> -->
+                                                            <input type="text" class="calender_box">
                                                         </div>
                                                         <div class="select_box">
                                                             <p class="selected-type">8시</p>
