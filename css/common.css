@@ -181,6 +181,10 @@ table th:first-of-type input[type="checkbox"] + label:after {
   background: url(../images/icon/checkbox_off_02.svg) center no-repeat;
 }
 
+table th:first-of-type input[type="checkbox"]:checked + label:after {
+  background: url(../images/icon/checkbox_on.svg) center no-repeat;
+}
+
 table td {
   text-align: center;
   font-weight: 700;
@@ -298,6 +302,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .scroll_x::-webkit-scrollbar {
+  width: 4px;
   height: 4px;
 }
 
@@ -504,4 +509,29 @@ input[type="radio"]:checked + label:after {
 .minical_area input:disabled {
   background-color: transparent;
   color: #333D4B;
+}
+
+.tit-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.tit-layout p {
+  font-size: 1.6rem;
+  color: #333D4B;
+  font-weight: 700;
+}
+
+.tit-layout span {
+  font-size: 1.4rem;
+  color: #426DC1;
+  font-weight: 700;
 }

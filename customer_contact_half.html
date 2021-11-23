@@ -571,7 +571,8 @@
                                         <!-- //none_box-->
                                     </div>
                                 </div>
-                                <div class="right_box">
+                                <div class="right_box half">
+                                    <!-- 50대 50 비율이 같을시 right box 'half' 추가-->
                                     <div class="cont_box">
                                         <!-- <div class="cont_tit">접촉이력</div> -->
                                         <div class="tit-layout">
@@ -755,218 +756,182 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="cont_box mt15">
-                                        <div class="cont_tit tab_tit">
-                                            <button type="button" class="on">신규일정등록</button>
-                                            <button type="button">수정/결과등록</button>
-                                        </div>
-                                        <button type="button" class="search_icon">검색</button>
-                                        <div class="client_input_area type">
-                                            <span>고객명</span>
-                                            <input type="text" value="삼성길동" disabled>
-                                            <input type="text" value="001-10-999999" disabled>
-                                            <input type="text" value="그룹 미지정" disabled>
-                                            <input type="text" value="가망고객" disabled>
-                                        </div>
-                                        <div class="form_cont_area">
-                                            <div class="dl_area">
-                                                <dl>
-                                                    <dt>접촉방식</dt>
-                                                    <dd>
-                                                        <div class="radio_area">
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="cont_01" name="contact" checked>
-                                                                <label for="cont_01">방문</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="cont_02" name="contact">
-                                                                <label for="cont_02">내방</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="cont_03" name="contact">
-                                                                <label for="cont_03">전화</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="cont_04" name="contact">
-                                                                <label for="cont_04">기타</label>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt class="mt10">접촉일시</dt>
-                                                    <dd>
-                                                        <div class="select_area">
-                                                            <div class="minical_area">
-                                                                <input type="text" class="calender_box">
-                                                            </div>
-                                                            <div class="select_box">
-                                                                <p class="selected-type">8시</p>
-                                                                <ul class="select_list scroll_y">
-                                                                    <li>8시</li>
-                                                                    <li>9시</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt class="mt10">접촉장소</dt>
-                                                    <dd>
-                                                        <input type="text" placeholder="방문 등의 경우 약속장소 또는 주소를 입력하세요. (한글기준 20자 이내)">
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt class="mt10">상품구분</dt>
-                                                    <dd>
-                                                        <div class="select_area">
-                                                            <div class="select_box">
-                                                                <p class="selected-type">상품선택</p>
-                                                                <ul class="select_list scroll_y">
-                                                                    <li>상품선택</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt>접촉목적</dt>
-                                                    <dd>
-                                                        <div class="radio_area">
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_01" name="purpose" checked>
-                                                                <label for="pur_01">상담</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_02" name="purpose">
-                                                                <label for="pur_02">상품설명</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_03" name="purpose">
-                                                                <label for="pur_03">상품제안</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_04" name="purpose">
-                                                                <label for="pur_04">계좌관리</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_05" name="purpose">
-                                                                <label for="pur_05">자료제공</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_06" name="purpose">
-                                                                <label for="pur_06">일상접촉</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="radio_area mt10">
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_07" name="purpose">
-                                                                <label for="pur_07">정기모임</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="pur_08" name="purpose">
-                                                                <label for="pur_08">기타</label>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt>내용</dt>
-                                                    <dd>
-                                                        <textarea placeholder="접촉했던 사항에 대해 기록이 필요한 사항 기재 (한글기준 500자 이내)"></textarea>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt>접촉결과</dt>
-                                                    <dd>
-                                                        <div class="radio_area">
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="resu_01" name="result" checked>
-                                                                <label for="resu_01">매우좋음</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="resu_02" name="result">
-                                                                <label for="resu_02">좋음</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="resu_03" name="result">
-                                                                <label for="resu_03">보통</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="resu_04" name="result">
-                                                                <label for="resu_04">회의적</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="resu_05" name="result">
-                                                                <label for="resu_05">관심없음</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="resu_06" name="result">
-                                                                <label for="resu_06">기타</label>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt>유치확률</dt>
-                                                    <dd>
-                                                        <div class="radio_area">
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_01" name="percentage" checked>
-                                                                <label for="per_01">0%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_02" name="percentage">
-                                                                <label for="per_02">10%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_03" name="percentage">
-                                                                <label for="per_03">20%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_04" name="percentage">
-                                                                <label for="per_04">30%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_05" name="percentage">
-                                                                <label for="per_05">40%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_06" name="percentage">
-                                                                <label for="per_06">50%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_07" name="percentage">
-                                                                <label for="per_07">60%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_08" name="percentage">
-                                                                <label for="per_08">70%</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="radio_area mt10">
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_09" name="percentage">
-                                                                <label for="per_09">80%</label>
-                                                            </div>
-                                                            <div class="radio_cont">
-                                                                <input type="radio" id="per_10" name="percentage">
-                                                                <label for="per_10">90%</label>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt class="mt10">추가요청</dt>
-                                                    <dd>
-                                                        <input type="text" placeholder="접촉고객이 추가로 요청한 사항이 있으면 기재 (한글기준 80자 이내)">
-                                                    </dd>
-                                                </dl>
+                                    <div class="cont_box">
+                                        <div class="cont_tit">접촉이력</div>
+                                        <div class="client_input_type">
+                                            <!-- 40% / 60% -->
+                                            <div class="short_box">
+                                                <span>일정구분</span>
+                                                <input type="text" value="짧은 경우" disabled>
                                             </div>
-                                            <div class="btn_area">
-                                                <input type="submit" value="삭제하기" class="btn line_btn">
-                                                <input type="reset" value="지우기" class="btn line_btn">
-                                                <input type="submit" value="저장하기" class="btn base_btn">
+                                            <div class="long_box">
+                                                <span>일정구분</span>
+                                                <input type="text" value="긴 경우" disabled>
+                                            </div>
+                                            <!-- 50% / 50% -->
+                                            <!-- <div class="half_box">
+                                                <span>일정구분</span>
+                                                <input type="text" value="짧은 경우" disabled>
+                                            </div>
+                                            <div class="half_box">
+                                                <span>일정구분</span>
+                                                <input type="text" value="짧은 경우" disabled>
+                                            </div> -->
+                                        </div>
+                                        <div class="date_table_type scroll_x">
+                                            <table>
+                                                <colgroup>
+                                                    <col width="15%">
+                                                    <col width="10%">
+                                                    <col width="*">
+                                                    <col width="*">
+                                                    <col width="*">
+                                                    <col width="20%">
+                                                    <col width="*">
+                                                    <col width="10%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>접촉일시</th>
+                                                        <th>상태</th>
+                                                        <th>방식</th>
+                                                        <th>구분</th>
+                                                        <th>접촉목적</th>
+                                                        <th>내용</th>
+                                                        <th>반응</th>
+                                                        <th>추가</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>05-31 19:00</td>
+                                                        <td>예정</td>
+                                                        <td>방문</td>
+                                                        <td>국내주식</td>
+                                                        <td>상담</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                XX주가 전망에 텍스트텍스트텍스트텍스트텍스트
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, autem?
+                                                            </div>
+                                                        </td>
+                                                        <td>양호</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                유..
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                유무유무유무
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-31 19:00</td>
+                                                        <td>예정</td>
+                                                        <td>방문</td>
+                                                        <td>국내주식</td>
+                                                        <td>상담</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                XX주가 전망에 텍스트텍스트텍스트텍스트텍스트
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, autem?
+                                                            </div>
+                                                        </td>
+                                                        <td>양호</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                유..
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                유무유무유무
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-31 19:00</td>
+                                                        <td>예정</td>
+                                                        <td>방문</td>
+                                                        <td>국내주식</td>
+                                                        <td>상담</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                XX주가 전망에 텍스트텍스트텍스트텍스트텍스트
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, autem?
+                                                            </div>
+                                                        </td>
+                                                        <td>양호</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                유..
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                유무유무유무
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-31 19:00</td>
+                                                        <td>예정</td>
+                                                        <td>방문</td>
+                                                        <td>국내주식</td>
+                                                        <td>상담</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                XX주가 전망에 텍스트텍스트텍스트텍스트텍스트
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, autem?
+                                                            </div>
+                                                        </td>
+                                                        <td>양호</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                유..
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                유무유무유무
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-31 19:00</td>
+                                                        <td>예정</td>
+                                                        <td>방문</td>
+                                                        <td>국내주식</td>
+                                                        <td>상담</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                XX주가 전망에 텍스트텍스트텍스트텍스트텍스트
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, autem?
+                                                            </div>
+                                                        </td>
+                                                        <td>양호</td>
+                                                        <td>
+                                                            <div class="tool-tip ellpsis">
+                                                                유..
+                                                            </div>
+                                                            <div class="tool-text">
+                                                                유무유무유무
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="page_navigation_area">
+                                            <div class="area">
+                                                <span href="#none" class="prev b_prev"></span>
+                                                <span href="#none" class="prev_txt">이전</span>
+                                                <span href="#none" class="next_txt active">다음</span>
+                                                <span href="#none" class="next a_next"></span>
                                             </div>
                                         </div>
                                     </div>

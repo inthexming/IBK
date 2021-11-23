@@ -155,7 +155,9 @@ table {
             input[type="checkbox"]+label:after {
                 background: url(../images/icon/checkbox_off_02.svg) center no-repeat;
             }
-
+            input[type="checkbox"]:checked + label:after {
+                background: url(../images/icon/checkbox_on.svg) center no-repeat;
+            }
         }
     }
 
@@ -286,6 +288,7 @@ input[type="radio"]:checked+label:after {
 }
 
 .scroll_x::-webkit-scrollbar {
+    width: 4px;
     height:4px;
 }
 
@@ -465,5 +468,24 @@ input[type="radio"]:checked+label:after {
             background-color: transparent;
             color:#333D4B;
         }
+    }
+}
+
+
+// 타이틀 레이아웃 
+.tit-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:2rem;
+    p{
+        font-size:1.6rem;
+        color: #333D4B;
+        font-weight: 700;
+    }
+    span{
+        font-size:1.4rem;
+        color:#426DC1;
+        font-weight: 700;
     }
 }
