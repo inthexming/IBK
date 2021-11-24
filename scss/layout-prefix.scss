@@ -3,6 +3,18 @@ $point-color:#000;
 $main-color:#012A50;
 $main-txt:30px;
 
+// 그래프 dot 색상
+$dot-1:#9EBBF4;
+$dot-2:#426DC1;
+$dot-3:#F9737A;
+$dot-4:#D1D6DA;
+
+//폰트사이즈 
+$px-12:1.2rem;
+$px-14:1.4rem;
+$px-16:1.6rem;
+$px-18:1.8rem;
+
 @mixin boxShadow{
   box-shadow: 0 3px 30px rgba(0,45,98,0.11);
 }
