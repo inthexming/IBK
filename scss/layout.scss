@@ -8,6 +8,9 @@
     width:calc(100% - 25rem);
     min-height:calc(100vh - 8.5rem);
     // overflow: hidden;
+    &.height {
+        min-height: auto;
+    }
     .inner {
         padding:4rem 4rem 0rem 4rem;
     }
@@ -1777,11 +1780,12 @@
 // 마이페이지_마이페이지
 .info_main_wrap {
     .info_cont_area {
-        margin:2rem 0 4rem;
+        margin:2rem 0 2rem;
     }
 
     .cont_box{
         position: relative;
+        padding:1.5rem;
         &::after{
             @include clear-both;
         }

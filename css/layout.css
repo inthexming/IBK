@@ -5,6 +5,10 @@
   min-height: calc(100vh - 8.5rem);
 }
 
+.pageCont_wrap.height {
+  min-height: auto;
+}
+
 .pageCont_wrap .inner {
   padding: 4rem 4rem 0rem 4rem;
 }
@@ -2158,11 +2162,12 @@
 }
 
 .info_main_wrap .info_cont_area {
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 2rem;
 }
 
 .info_main_wrap .cont_box {
   position: relative;
+  padding: 1.5rem;
 }
 
 .info_main_wrap .cont_box::after {
