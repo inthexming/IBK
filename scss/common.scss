@@ -489,3 +489,14 @@ input[type="radio"]:checked+label:after {
         font-weight: 700;
     }
 }
+
+// 텍스트 정렬 
+.txtleft{
+    text-align: left !important;
+}
+.txtCen{
+    text-align: center !important;
+}
+.txtRight{
+    text-align: right !important;
+}

@@ -535,3 +535,15 @@ input[type="radio"]:checked + label:after {
   color: #426DC1;
   font-weight: 700;
 }
+
+.txtleft {
+  text-align: left !important;
+}
+
+.txtCen {
+  text-align: center !important;
+}
+
+.txtRight {
+  text-align: right !important;
+}
