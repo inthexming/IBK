@@ -500,3 +500,46 @@ input[type="radio"]:checked+label:after {
 .txtRight{
     text-align: right !important;
 }
+
+// 툴팁 적용
+.tooltipTable {
+    table {
+        table-layout: fixed;
+        th{
+            position: relative;
+        }
+        td{
+            position: relative;
+        }
+        .ellpsis{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .tool-tip{
+            font-size:1.2rem;
+            position: relative;
+            cursor: pointer;
+            &:hover +  .tool-text{
+                display: block;
+            }
+        }
+        .tool-text {
+            display: none;
+            font-size:1.2rem;
+            position: absolute;
+            top:3rem;
+            left:0;
+            z-index: 10;
+            padding:0.8rem;
+            // word-break: keep-all;
+            border-radius:0.5rem;
+            @include boxShadow;
+            font-weight: 400;
+            color: #fff;
+            background: #333D4B;
+            text-align: left;
+        }
+    }
+    
+}
