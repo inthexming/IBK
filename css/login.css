@@ -1,5 +1,5 @@
+@charset "UTF-8";
 .login_box {
-  background: #fff !important;
   width: calc(100% - 50rem);
   margin: auto;
   position: relative;
@@ -130,4 +130,35 @@
   font-size: 1.4rem;
   color: #8B95A1;
   text-decoration: underline;
+}
+
+/* 12/6 추가 로그인 체크박스 영역*/
+.login_chk_box {
+  margin-top: 2rem;
+}
+
+.login_chk_box input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 3rem;
+  font-size: 1.2rem;
+  color: #757575;
+  /* text color*/
+}
+
+.login_chk_box input[type="checkbox"] + label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../images/icon/checkbox_off.svg) center no-repeat;
+  background-size: contain;
+}
+
+.login_chk_box input[type="checkbox"]:checked + label:after {
+  background: url(../images/icon/checkbox_on.svg) center no-repeat;
+  background-size: contain;
 }
