@@ -977,7 +977,8 @@
 }
 
 .analysis_cont_wrap .analysis_container .cont_box .flex_item .cat_tit {
-  margin-right: 3.5rem;
+  margin-right: 0rem;
+  width: 20%;
 }
 
 .analysis_cont_wrap .analysis_container .cont_box .flex_item dl {
