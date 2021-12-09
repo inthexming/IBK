@@ -367,14 +367,12 @@
                 display: block;
                 width:100%;
                 margin-top:3rem;
-                // position: absolute;
-                // top:40px;
-                // left:50%;
-                // transform: translateX(-50%);
                 > div{
                     padding:3px 0 3px 10px;
                     text-align: left;
                     margin-bottom:6px;
+                    display: flex;
+                    flex-wrap: wrap;
                     .num{
                         font-size:1.2rem;
                         font-weight: normal;
@@ -382,6 +380,7 @@
                     .name {
                         font-size:1.2rem;
                         margin-left: 3px;
+                        @include ellipsis(100%);
                     }
                     &.bg_blue {
                         background-color: rgba(66,109,193,0.1);
@@ -428,41 +427,73 @@
                         opacity: 0.56;
                     }
                 }
-                .bar_line{
-                    display: block;
-                    width:100%;
-                    // position: absolute;
-                    // top:40px;
-                    // left:50%;
-                    // transform: translateX(-50%);
-                    > div{
-                        padding:3px 0 3px 10px;
-                        text-align: left;
-                        margin-bottom:6px;
-                        .num{
-                            font-size:1.2rem;
-                            font-weight: normal;
-                            font-weight: 700;
+            /* 12 / 9 수정 */
+            .bar_line{
+                min-height: 15rem;
+                display: block;
+                width:100%;
+                margin-top:3rem;
+                > div{
+                    padding:3px 0 3px 10px;
+                    text-align: left;
+                    margin-bottom:6px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    position: relative;
+                    cursor: pointer;
+                    &:hover{
+                        .tool-text{
+                            display: block;
                         }
-                        .name {
-                            font-size:1.2rem;
-                            margin-left: 3px;
-                            font-weight: 700;
+                    }
+                    .num{
+                        font-size:1.2rem;
+                        font-weight: normal;
+                        padding:0;
+                    }
+                    .name {
+                        flex:1;
+                        font-size:1.2rem;
+                        margin-left: 3px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .tool-text{
+                        position: absolute;
+                        top:2rem;
+                        left:0;
+                        font-size:1.2rem;
+                        display: none;
+                        z-index: 10;
+                        border-radius: 0.5rem;
+                        padding:0.5rem;
+                        width: calc(100% - 1rem);
+                    }
+                    &.bg_blue {
+                        background-color: rgba(66,109,193,0.1);
+                        .num {
+                            color:#426DC1;
                         }
-                        &.bg_blue {
-                            background-color: rgba(66,109,193,0.1);
-                            .num {
-                                color:#426DC1;
-                            }
+                        .tool-text{
+                            background-color: rgba(66,109,193,1);
+                            color:#fff;
                         }
-                        &.bg_red {
-                            background-color: rgba(249, 115, 122, 0.1);
-                            .num {
-                                color:#F9737A;
-                            }
+                    }
+                    &.bg_red {
+                        background-color: rgba(249, 115, 122, 0.1);
+                        .num {
+                            color:#F9737A;
+                        }
+                        .tool-text{
+                            background-color: rgba(249, 115, 122, 1);
+                            color:#fff;
                         }
                     }
                 }
+            }
+            /***/
             }
         }
     }
