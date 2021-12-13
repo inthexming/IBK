@@ -1,0 +1,84 @@
+@import 'layout-prefix.scss';
+
+.total_lookup_cont {
+    .sec_box{
+        .select_tit{
+            font-size:1.4rem;
+            color:#5F6E81;
+            float: left;
+            margin-top:1rem;
+            margin-right:2rem;
+        }
+    }
+    
+}
+
+.assetFn_wrap {
+    .graph_contents{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .cont_box{
+            .graph_area{
+                min-height: 17.4rem;
+            }
+        }
+    }
+    .cont_box {
+        width:calc(22.8% - 2rem);
+        position:relative;
+        .radio_area{
+            position: absolute;
+            top:2rem;
+            right:2rem;
+            display: flex;
+            .radio_cont{
+                margin-right: 1rem;
+            }
+        }
+        .dot_contents{
+            margin-top:1.6rem;
+            text-align: center;
+            span{
+                font-size:1.4rem;
+                position: relative;
+                display: inline-block;
+                position: relative;
+                padding-left: 1.5rem;
+                margin-right: 1.5rem;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+                &.blue{
+                    &::before{
+                        background-color: #9EBBF4;
+                    }
+                }
+                &.dark_blue{
+                    &::before{
+                        background-color: #426DC1;
+                    }
+                }
+                &.red{
+                    &::before{
+                        background-color: #F9737A;
+                    }
+                }
+            }
+        }
+    }
+    .totalInfo_cont_area .cont_box{
+        min-height: auto;
+        .graph_area{
+            min-height:42rem;
+        }
+    }
+}
