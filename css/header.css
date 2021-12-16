@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header_inner {
   background-color: #012A50;
   padding: 2rem;
@@ -151,4 +152,60 @@
   font-weight: 700;
   padding-left: 3rem;
   background: url(../images/icon/logout.svg) left center no-repeat;
+}
+
+/* +++ 12/16 추가 time 영역 +++ */
+.header_inner .logo {
+  float: left;
+  position: relative;
+}
+
+.header_inner .logo a {
+  color: #fff;
+  font-size: 2.4rem;
+  font-family: 'Montserrat', 'Noto Sans KR',sans-serif;
+  font-weight: 700;
+}
+
+.header_inner .logo .time_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 2.8rem;
+  left: 0;
+}
+
+.header_inner .logo .time_area .time {
+  font-size: 1.2rem;
+  color: #E8F1FF;
+  font-weight: 700;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_inner .logo .time_area .time i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/icon/time.svg) center no-repeat;
+  background-size: cover;
+  margin-right: 0.2rem;
+}
+
+.header_inner .logo .time_area .time_msg {
+  margin-left: 0.9rem;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  color: #FFFFFF;
+  background-color: #426DC1;
 }

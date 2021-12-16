@@ -122,3 +122,47 @@
     }
     
 }
+
+/* +++ 12/16 추가 time 영역 +++ */
+.header_inner{
+    .logo{ 
+        float:left;
+        position: relative;
+        a{
+            color:#fff;
+            font-size:2.4rem;
+            font-family: 'Montserrat', 'Noto Sans KR',sans-serif;
+            font-weight: 700;
+        }
+        .time_area{
+            display:flex;
+            align-items: center;
+            position: absolute;
+            top:2.8rem;
+            left:0;
+            .time{
+                font-size:1.2rem;
+                color:#E8F1FF;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                i{
+                    display: inline-block;
+                    @include square(18px);
+                    background: url(../images/icon/time.svg) center no-repeat;
+                    background-size: cover;
+                    margin-right:0.2rem;
+                }
+            }
+            .time_msg{
+                margin-left:0.9rem;
+                display: inline-block;
+                font-size:1rem;
+                padding:0.3rem;
+                border-radius:0.4rem;
+                color:#FFFFFF;
+                background-color:#426DC1;
+            }
+        }
+    }
+}
